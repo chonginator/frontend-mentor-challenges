@@ -16,6 +16,9 @@
 }
 
 body {
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
   margin: 0 10%;
   color: rgba(var(--white), 1);
   font-size: 13px;
