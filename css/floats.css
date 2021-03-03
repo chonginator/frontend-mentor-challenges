@@ -4,7 +4,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 
 :root {
@@ -19,7 +19,66 @@
 }
 
 body {
-  font-family: Spartan, sans-serif; 
+  font-family: Spartan, sans-serif;
+  color: var(--dark-magenta);
+  font-size: 15px;
+}
+
+h1 {
+  /* Major third type scale from type-scale.com */
+  font-size: 2.441em;
+}
+
+h2 {
+  font-size: 1.25em;
+  font-weight: 400;
+  color: var(--dark-gray-magenta);
+  margin-top: 1.25em;
+}
+
+.review {
+  background-color: var(--light-gray-magenta);
+  font-weight: 700;
+  /* Turning the review cards into a block-formatting context contains the vertical margins within them for some reason */
+  display: flow-root;
+}
+
+.review > * {
+  margin: 1em 0;
+}
+
+/* Add a top margin to all but the first review card */
+.review:not(.review:first-child) {
+  margin-top: 1em;
+}
+
+.review::before {
+  content: '';
+  display: block;
+  background-image: url(../images/icon-star.svg);
+  background-repeat: space;
+  width: 85px;
+  height: 16px;
+  margin: 1em auto;
+  /* border: 1px solid blue; */
+}
+
+.testimonial {
+  background-color: var(--dark-magenta);
+  color: var(--white);
+  font-weight: 400;
+}
+
+.testimonial:not(.testimonial:first-child) {
+  margin-top: 1em;
+}
+
+.user-name {
+  font-weight: 500;
+}
+
+.user-title {
+  color: var(--pink);
 }
 
 /* Mobile-first layout */
@@ -28,6 +87,10 @@ main {
   width: 92%;
   /* border: 5px solid blue; */
   margin: 0 auto;
+}
+
+.row > * {
+  margin-top: 2.441em;
 }
 
 /* Grid system */
