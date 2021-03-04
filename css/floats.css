@@ -24,32 +24,34 @@ body {
   font-size: 15px;
 }
 
+/* Headings */
 h1 {
   /* Major third type scale from type-scale.com */
   font-size: 2.441em;
+  line-height: 1em;
+  margin-top: 2.5em;
 }
 
 h2 {
-  font-size: 1.25em;
-  font-weight: 400;
+  font-size: 1em;
+  font-weight: 500;
   color: var(--dark-gray-magenta);
-  margin-top: 1.25em;
+  margin-top: 1.441em;
+  line-height: 1.563em;
+  /* border: 1px solid red; */
+  text-align: center;
 }
 
+/* Reviews */
 .review {
   background-color: var(--light-gray-magenta);
   font-weight: 700;
-  /* Turning the review cards into a block-formatting context contains the vertical margins within them for some reason */
-  display: flow-root;
-}
-
-.review > * {
-  margin: 1em 0;
+  padding: 1em 0;
 }
 
 /* Add a top margin to all but the first review card */
 .review:not(.review:first-child) {
-  margin-top: 1em;
+  margin-top: 1.25em;
 }
 
 .review::before {
@@ -59,22 +61,47 @@ h2 {
   background-repeat: space;
   width: 85px;
   height: 16px;
-  margin: 1em auto;
+  margin: 0 auto;
   /* border: 1px solid blue; */
+}
+
+.review p {
+  margin-top: 1em;
+}
+
+.card {
+  border-radius: 0.5em;
+}
+
+/* Testimonials */
+.testimonial  * {
+  /* border: 1px solid yellow; */
 }
 
 .testimonial {
   background-color: var(--dark-magenta);
-  color: var(--white);
+  color: var(--light-gray-magenta);
   font-weight: 400;
+  padding: 3.052em 1.953em;
+  line-height: 1.563em;
+}
+
+.testimonial p {
+  margin-top: 1.563em;
 }
 
 .testimonial:not(.testimonial:first-child) {
   margin-top: 1em;
 }
 
+.user-icon {
+  width: 48px;
+  border-radius: 50%;
+  margin-right: 1.563em;
+}
+
 .user-name {
-  font-weight: 500;
+  font-weight: 700;
 }
 
 .user-title {
@@ -84,13 +111,13 @@ h2 {
 /* Mobile-first layout */
 
 main {
-  width: 92%;
+  width: 84%;
   /* border: 5px solid blue; */
   margin: 0 auto;
 }
 
 .row > * {
-  margin-top: 2.441em;
+  margin-top: 3.052em;
 }
 
 /* Grid system */
@@ -103,7 +130,7 @@ main {
   text-align: center;
 }
 
-.profile-icon {
+.user-icon {
   float: left;
 }
 
