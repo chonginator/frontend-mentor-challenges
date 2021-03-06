@@ -30,6 +30,7 @@ body {
 
 main {
   width: 84%;
+  /* Aligns the main element in the middle horizontally */
   margin: 0 auto;
   padding-top: 6.5em;
   padding-bottom: 7em;
@@ -58,7 +59,7 @@ h2 {
 .review {
   background-color: var(--light-gray-magenta);
   font-weight: 700;
-  padding: 0.85em 2em;
+  padding: 1.4em 2.5em;
 }
 
 /* Add a top margin to all but the first review card */
@@ -96,10 +97,6 @@ h2 {
   letter-spacing: -0.03em;
 }
 
-.testimonial  * {
-  /* border: 1px solid yellow; */
-}
-
 .testimonial p {
   margin-top: 1.69em;
   font-weight: 500;
@@ -119,14 +116,12 @@ h2 {
 .user-name {
   font-weight: 700;
   position: relative;
-  /* top: 0.3em; */
 }
 
 .user-title {
   color: var(--pink);
   opacity: 0.7;
   position: relative;
-  /* top: 0.35em; */
 }
 
 /* Grid system */
@@ -149,7 +144,13 @@ h2 {
   *,
   *::before,
   *::after {
-    /* border: 1px solid yellow; */
+  }
+
+  body {
+    background-image: url(../images/bg-pattern-top-desktop.svg);
+    background-origin: border-box;
+    background-position: -290% 0%;
+    background-repeat: repeat-x;
   }
 
   main {
@@ -159,6 +160,8 @@ h2 {
   .wrapper {
     width: 44%;
   }
+
+  /* Headings */
 
   h1 {
     font-size: 3.2em;
@@ -176,18 +179,17 @@ h2 {
     float: left;
   }
 
+  /* Reviews section */
   .reviews {
     float: right;
     width: 50%;
     margin-top: 1em;
-    /* border: 5px solid blue; */
   }
 
   .review {
     width: 80%;
     font-size: 0.89em;
     float: right;
-    padding: 1.5em 2em;
   }
 
   .stars {
@@ -197,13 +199,28 @@ h2 {
   .review p {
     float: left;
     padding-top: 0;
+    margin-left: 2.3em;
+    position: relative;
+    top: 0.05em;
   }
 
+  .review:first-child {
+    position: relative;
+    right: 8em;
+  }
+
+  .review:nth-child(2) {
+    position: relative;
+    right: 4em;
+  }
+
+  /* Testimonials section */
   .testimonials {
-    margin-top: 0.8em;
+    margin-top: 4.8em;
   }
 
   .testimonial {
+    /* Based on three testimonial cards and a left margin in the next rule of 2.2em on all but the first */
     width: calc((100% - 4.4em) / 3);
   }
 
@@ -221,5 +238,4 @@ h2 {
     position: relative;
     top: 2.2em;
   }
-}
 }
