@@ -124,12 +124,6 @@ h2 {
   position: relative;
 }
 
-/* Grid system */
-.row, .user-header, .testimonials {
-  /* modern 'clearfix' */
-  display: flow-root;
-}
-
 .wrapper, .reviews {
   text-align: center;
 }
@@ -138,12 +132,18 @@ h2 {
   float: left;
 }
 
+.row, .user-header, .testimonials {
+  /* modern 'clearfix' */
+  display: flow-root;
+}
+
 /* Media queries */
+
 /* Desktop screen sizes */
 @media only screen and (min-width: 768px) {
-  *,
-  *::before,
-  *::after {
+  /* Float-based grid system */
+  .wrapper, .testimonial {
+    float: left;
   }
 
   body {
@@ -162,7 +162,6 @@ h2 {
   }
 
   /* Headings */
-
   h1 {
     font-size: 3.2em;
     text-align: left;
@@ -175,10 +174,6 @@ h2 {
     width: 90%;
   }
 
-  .wrapper, .testimonial {
-    float: left;
-  }
-
   /* Reviews section */
   .reviews {
     float: right;
@@ -189,29 +184,30 @@ h2 {
   .review {
     width: 80%;
     font-size: 0.89em;
-    float: right;
+    float: left;
   }
 
   .stars {
     float: left;
+    margin-right: 2.3em;
   }
 
   .review p {
     float: left;
     padding-top: 0;
-    margin-left: 2.3em;
     position: relative;
+    text-align: left;
     top: 0.05em;
-  }
-
-  .review:first-child {
-    position: relative;
-    right: 8em;
   }
 
   .review:nth-child(2) {
     position: relative;
-    right: 4em;
+    left: 4em;
+  }
+
+  .review:last-child {
+    position: relative;
+    left: 8em;
   }
 
   /* Testimonials section */
@@ -238,4 +234,47 @@ h2 {
     position: relative;
     top: 2.2em;
   }
+
+  /* CSS grid and flexbox-based layouts for modern browsers */
+  /* Turn the float-based grid styles of by turning .row, .testimonials, .reviews, .review into css grids or flexboxes*/
+
+  .row:first-child {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+  }
+
+  .reviews {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .testimonials {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @supports(display: grid) {
+    :is(.row, .reviews) > * {
+      width: auto;
+    }
+
+    .review {
+      flex: 0 1 444px;
+    }
+    /* Backwards-compatible version with :-*-any() and :matches() */
+    :-webkit-any(.rows, .reviews, .testimonials) > * {
+      width: auto;
+    }
+
+    :-moz-any(.rows, .reviews, .testimonials) > * {
+      width: auto;
+    }
+
+    :matches(.rows, .reviews, .testimonials) > * {
+      width: auto;
+    }
+  }
+
 }
