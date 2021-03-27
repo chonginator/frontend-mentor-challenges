@@ -1,0 +1,248 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Primary colours */
+  --dark-magenta: hsl(300, 43%, 22%);
+  --pink: hsl(333, 80%, 67%);
+
+  /* Neutral colours */
+  --dark-gray-magenta: hsl(303, 10%, 53%);
+  --light-gray-magenta: hsl(300, 24%, 96%);
+  --white: hsl(0, 0%, 100%);
+}
+
+body {
+  font-family: Spartan, sans-serif;
+  color: var(--dark-magenta);
+  font-size: 15px;
+  background-image: url(../images/bg-pattern-top-mobile.svg);
+  background-origin: border-box;
+  background-position: top right;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+main {
+  max-width: 84%;
+  /* Aligns the main element in the middle horizontally */
+  margin: 0 auto;
+  padding-top: 6.5em;
+  padding-bottom: 7em;
+}
+
+/* Headings */
+h1 {
+  /* Major third type scale from type-scale.com */
+  font-size: 2.441em;
+  line-height: 1em;
+  letter-spacing: -0.04em;
+  text-align: center;
+}
+
+h2 {
+  color: var(--dark-gray-magenta);
+  font-size: 1em;
+  font-weight: 500;
+  line-height: 1.7em;
+  margin-top: 1.441em;
+  opacity: 0.8;
+  text-align: center;
+}
+
+/* Reviews */
+.review {
+  background-color: var(--light-gray-magenta);
+  font-weight: 700;
+  padding: 1.2em;
+  text-align: center;
+}
+
+.stars {
+  display: grid;
+  grid-template-columns: repeat(5, min-content);
+  grid-gap: 8px;
+  justify-content: center;
+}
+
+.review p {
+  font-weight: 700;
+}
+
+.card {
+  border-radius: 0.6em;
+}
+
+/* Testimonials */
+.testimonial {
+  background-color: var(--dark-magenta);
+  color: var(--light-gray-magenta);
+  font-size: 0.89em;
+  font-weight: 400;
+  padding: 2.7em 2.441em;
+  line-height: 1.65em;
+  letter-spacing: -0.03em;
+}
+
+.testimonial p {
+  font-weight: 500;
+  opacity: 0.8;
+}
+
+.user-icon {
+  width: 3em;
+  border-radius: 50%;
+}
+
+.user-name {
+  font-weight: 700;
+}
+
+.user-title {
+  color: var(--pink);
+  opacity: 0.7;
+}
+
+/* Grid system */
+main {
+  display: grid;
+  grid-gap: 49px;
+  grid-template-areas:
+    "headings"
+    "reviews"
+    "testimonials";
+}
+
+.reviews, .testimonials {
+  display: grid;
+  grid-gap: 16px;
+}
+
+.review {
+  display: grid;
+  grid-gap: 12px;
+}
+
+.testimonial {
+  display: grid;
+  grid-column-gap: 22px;
+  /* first column of 3em is from .user-icon with the same width */
+  grid-template-columns: 3em auto;
+  grid-template-rows: repeat(3, 0.2fr) 1fr;
+  grid-template-areas:
+    "user-icon   user-name"
+    "user-icon   user-title"
+    ".........   .........."
+    "testimonial testimonial";
+}
+
+.user-icon {
+  grid-area: user-icon;
+}
+
+.user-name {
+  grid-area: user-name;
+}
+
+.user-title {
+  grid-area: user-title;
+}
+
+.testimonial p {
+  grid-area: testimonial;
+}
+
+/* Media queries */
+/* Desktop screen sizes */
+@media only screen and (min-width: 768px) {
+  /* Base styles */
+  body {
+    background-image:
+      url(../images/bg-pattern-top-desktop.svg),
+      url(../images/bg-pattern-bottom-desktop.svg);
+    background-origin: border-box;
+    background-position:
+      -700px top,
+      280px 100px;
+    background-repeat: no-repeat;
+  }
+
+  main {
+    max-width: 77%;
+  }
+
+  /* Headings */
+  h1 {
+    font-size: 3.2em;
+    text-align: left;
+  }
+
+  h2 {
+    margin-top: 0.8em;
+    text-align: left;
+  }
+
+  /* Reviews */
+  .review {
+    font-size: 0.89em;
+    position: relative;
+  }
+
+  .review:first-child {
+    right: 8em;
+  }
+
+  .review:nth-child(2) {
+    right: 4em;
+  }
+
+  .stars {
+    text-align: left;
+    white-space: nowrap;
+  }
+
+  .review p {
+    text-align: left;
+  }
+
+  /* Testimonials */
+  .testimonial:nth-child(2) {
+    position: relative;
+    top: 1em;
+  }
+
+  .testimonial:last-child {
+    position: relative;
+    top: 2em;
+  }
+
+  /* Grid system */
+  main {
+    grid-template-columns: 2.8fr 2.8fr;
+    grid-template-areas:
+      "headings    reviews"
+      "testimonial testimonial";
+    grid-gap: 75px 200px;
+  }
+
+  .review {
+    grid-template-columns: auto 1fr;
+    grid-gap: 33px;
+    padding: 0 3em;
+  }
+
+  .stars, .review p {
+    margin: auto 0;
+  }
+
+  .testimonials {
+    grid-area: testimonial;
+    grid-gap: 30px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
