@@ -118,8 +118,19 @@ main {
     "testimonials";
 }
 
-.reviews, .testimonials {
+.wrapper {
+  grid-area: headings;
+}
+
+.reviews {
   display: grid;
+  grid-area: reviews;
+  grid-gap: 16px;
+}
+
+.testimonials {
+  display: grid;
+  grid-area: testimonials;
   grid-gap: 16px;
 }
 
@@ -228,6 +239,10 @@ main {
       "headings    reviews"
       "testimonial testimonial";
     grid-gap: 75px 200px;
+  }
+
+  .reviews {
+    margin-top: 1em;
   }
 
   .review {
