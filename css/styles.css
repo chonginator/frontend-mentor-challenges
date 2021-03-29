@@ -45,7 +45,7 @@ h1 {
   text-align: center;
 }
 
-h2 {
+.wrapper p {
   color: var(--dark-gray-magenta);
   font-size: 1em;
   font-weight: 500;
@@ -87,6 +87,10 @@ h2 {
   padding: 2.7em 2.441em;
   line-height: 1.65em;
   letter-spacing: -0.03em;
+}
+
+.testimonial h3, .testimonial small {
+  font-size: 1em;
 }
 
 .testimonial p {
@@ -193,7 +197,7 @@ main {
     text-align: left;
   }
 
-  h2 {
+  .wrapper p {
     margin-top: 0.8em;
     text-align: left;
   }
@@ -201,6 +205,7 @@ main {
   /* Reviews */
   .review {
     font-size: 0.89em;
+    max-height: 56px;
     position: relative;
   }
 
