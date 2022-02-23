@@ -7,29 +7,39 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 
   <title>Frontend Mentor | Base Apparel coming soon page</title>
-
+  
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+    </style>
 </head>
 <body>
-  <nav>
-    <img src="./images/logo.svg">
-  </nav>
-  <img src="./images/hero-mobile.jpg" alt="hero image">
-  <img src="./images/hero-desktop.jpg" alt="hero image">
+  <div class="container">
+    <div class="col-right">
+      <header>
+        <nav>
+          <img src="images/logo.svg" alt="Base Apparel logo">
+        </nav>
 
-  <div>
-    <p>We're coming soon</p>
+        <img src="./images/hero-desktop.jpg" alt="hero image">
+      </header>
+    </div>
 
-    <p>Hello fellow shoppers! We're currently building our new fashion store.
-    Add your email below to stay up-to-date with announcements and our launch deals.</p>
+    <div class="col-left">
+      <main>
+        <h1>We're coming soon</h1>
+        <p>Hello fellow shoppers! We're currently building our new fashion store.
+        Add your email below to stay up-to-date with announcements and our launch deals.</p>
 
-    <form id="email-form">
-      <input type="text" placeholder="Email Address">
-      <button type="submit" form="email-form"></button>
+        <form action="#" method="post">
+          <input type="email" placeholder="Email Address" aria-label="Email Address">
+          <button type="submit" aria-label="Submit">></button>
+        </form>
+      </main>
+    </div>
+
+  </div>
 
   <footer>
     <p class="attribution">
