@@ -15,37 +15,29 @@
     </style>
 </head>
 <body>
-  <div class="container">
-    <div class="col-right">
-      <header>
-        <nav>
-          <img src="images/logo.svg" alt="Base Apparel logo">
-        </nav>
+  <header class="header">
+    <nav class="main-nav">
+      <img class="main-nav__logo" src="images/logo.svg" alt="Base Apparel logo">
+    </nav>
+  </header>
 
-        <img src="./images/hero-desktop.jpg" alt="hero image">
-      </header>
-    </div>
-
-    <div class="col-left">
-      <main>
-        <h1>We're coming soon</h1>
-        <p>Hello fellow shoppers! We're currently building our new fashion store.
+  <main>
+    <section class="hero">
+      <div class="hero__left">
+        <h1 class="hero__title">We're coming soon</h1>
+        <p class="hero__subtitle">Hello fellow shoppers! We're currently building our new fashion store.
         Add your email below to stay up-to-date with announcements and our launch deals.</p>
-
-        <form action="#" method="post">
-          <input type="email" placeholder="Email Address" aria-label="Email Address">
-          <button type="submit" aria-label="Submit">></button>
+  
+        <form class="form" action="#" method="post">
+          <input class="form__email" type="email" placeholder="Email Address" aria-label="Email Address">
+          <button class="form__submit" type="submit" aria-label="Submit">></button>
         </form>
-      </main>
-    </div>
-
-  </div>
-
-  <footer>
-    <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-      Coded by <a href="#">Your Name Here</a>.
-    </p>
-  </footer>
+      </div>
+      
+      <div class="hero__right">
+        <img class="hero__img" src="./images/hero-desktop.jpg" alt="hero image">
+      </div>
+    </section>
+  </main>
 </body>
 </html>
