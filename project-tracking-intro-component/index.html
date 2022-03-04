@@ -15,47 +15,53 @@
   </style>
 </head>
 <body>
-  <header>
-    <nav>
-        <div>
-          <a href="#">
-            <img src="images/logo.svg" alt="Logo">
+  <header class="header">
+    <nav class="main-nav">
+        <div class="container">
+          <a class="main-nav__link" href="#">
+            <img class="main-nav__logo" src="images/logo.svg" alt="Logo">
           </a>
 
-          <ul>
+          <ul class="main-nav__list">
             <li>
-              <a href="#">Product</a>
+              <a class="main-nav__link" href="#">Product</a>
             </li>
     
             <li>
-              <a href="#">Features</a>
+              <a class="main-nav__link" href="#">Features</a>
             </li>
             <li>
-              <a href="#">Pricing</a>
+              <a class="main-nav__link" href="#">Pricing</a>
             </li>
             <li>
-              <a href="#">Login</a>
+              <a class="main-nav__link" href="#">Login</a>
             </li>
           </ul>
-        </div>
+        </div> <!-- / .container -->
       </nav>
   </header>
 
-  <main>
-    <div>
-      <div>
-        <h1>Powerful insights into your team</h1>
-        <p><span>New</span> Monograph Dashboard</p>
-        <div>
-          <a href="#">Schedule a demo</a>
-          <p>To see a live preview</p>
-        </div>
-      </div>
+  <main class="hero">
+    <div class="container">
+      <div class="columns">
+        <div class="columns__column-left">
+          <h1 class="hero__title">Powerful insights into your team</h1>
 
-      <div>
-        <img src="images/illustration-devices.svg" alt="Mobile and desktop devices">
-      </div>
-    </div>
+          <p class="hero__eyebrow"><span class="sticker">New</span> Monograph Dashboard</p>
+
+          <p class="hero__subtitle">Project planning and time tracking for agile teams</p>
+
+          <p class="hero__cta">
+            <a class="btn" href="#">Schedule a demo</a>
+            to see a preview
+          </p>
+        </div> <!-- / .columns__column-left-->
+  
+        <div class="columns__column-right">
+          <img class="hero__img" src="images/illustration-devices.svg" alt="Mobile and desktop devices">
+        </div>
+      </div> <!-- / .columns -->
+    </div> <!-- / .container -->
   </main>
 </body>
 </html>
