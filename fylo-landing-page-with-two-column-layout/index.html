@@ -16,154 +16,171 @@
 </head>
 <body>
   <header>
-    <nav class="navbar">
-      <div class="container flex">
-        <a href="#">
-          <img src="images/logo.svg" alt="Fylo logo">
+    <nav class="main-nav">
+      <div class="container">
+        <a class="main-nav__link" href="#">
+          <img class="logo logo--dark" src="images/logo.svg" alt="Fylo logo">
         </a>
   
-        <ul>
-          <li><a href="#">Features</a></li>
-          <li><a href="#">Team</a></li>
-          <li><a href="#">Sign In</a></li>
+        <ul class="main-nav__list">
+          <li><a class="main-nav__link" href="#">Features</a></li>
+          <li><a class="main-nav__link" href="#">Team</a></li>
+          <li><a class="main-nav__link" href="#">Sign In</a></li>
         </ul>
       </div>
     </nav>
   </header>
   
   <main>
-    <section class="section-hero">
-      <div class="container flex">
-        <div class="section-primary">
-          <h1>All your files in one secure location, accessible anywhere.</h1>
-          <p>
-            Fylo stores your most important files in one secure location. 
-            Access them wherever you need, share and collaborate with friends, 
-            family, and co-workers.
-          </p>
-          <form class="hero-form" action="#" method="post">
-            <input type="email" aria-label="Email Address" placeholder="Enter your email...">
-            <button class="btn btn-primary" type="submit">Get Started</button>
-          </form>
-        </div>
-
-        <div class="section-secondary">
-          <img src="images/illustration-1.svg" alt="">
-        </div>
-      </div>
-    </section> <!-- / .section-hero -->
-      
-    <section class="section-feature">
-      <div class="container flex">
-        <div class="section-primary">
-          <h2>Stay productive, wherever you are</h2>
-  
-          <p>
-            Never let location be an issue when accessing your files. Fylo has you 
-            covered for all of your file storage needs.
-          </p>
-  
-          <p>
-            Securely share files and folders with friends, family and colleagues for 
-            live collaboration. No email attachments required!
-          </p>
-        
-          <a href="#">See how Fylo works</a>
-  
-          <blockquote class="testimonial">
-            <p class="testimonial-body">
+    <section class="section">
+      <div class="container">
+        <div class="columns">
+          <div class="columns__col-left">
+            <h1 class="section__title">All your files in one secure location, accessible anywhere.</h1>
+            <p class="section__copy">
+              Fylo stores your most important files in one secure location. 
+              Access them wherever you need, share and collaborate with friends, 
+              family, and co-workers.
             </p>
-
-            <div class="testimonial-header">
+            <form class="form" action="#" method="post">
+              <input class="form__input" type="email" aria-label="Email Address" placeholder="Enter your email...">
+              <button class="btn btn--color-dark-blue" type="submit">Get Started</button>
+            </form>
+          </div>
   
-              <div class="testimonial-header-img">
-                <img src="images/avatar-testimonial.jpg" alt="">
-              </div>
+          <div class="columns_col-right">
+            <img class="section__image" src="images/illustration-1.svg" alt="">
+          </div>
+        </div> <!-- / .columns -->
+      </div> <!-- / .container -->
+    </section> <!-- / .hero -->
+      
+    <section class="section">
+      <div class="container">
+        <div class="columns">
+          <div class="columns__col-left">
+            <h2 class="section__title">Stay productive, wherever you are</h2>
+    
+            <div class="section__body">
+              <p class="section__copy">
+                Never let location be an issue when accessing your files. Fylo has you 
+                covered for all of your file storage needs.
+              </p>
+      
+              <p class="section__copy">
+                Securely share files and folders with friends, family and colleagues for 
+                live collaboration. No email attachments required!
+              </p>
+            </div>
+          
+            <a class="link" href="#">See how Fylo works</a>
+    
+            <div class="card">
+              <p class="card__body">
+                Fylo has improved our team productivity by an
+                order of magnitude. Since making the switch our team
+                has become a well-oiled collaboration machine.
+              </p>
   
-              <div class="testimonial-header-text">
-                <p class="testimonial-header-text-name">
-                  Kyle Burton
-                </p>
-                <p class="testimonial-header-text-title">
-                  Founder & CEO, Huddle
-                </p>
-              </div>
+              <div class="card__header">
+                <div class="columns">
+                  <div class="columns__col-left">
+                    <img src="images/avatar-testimonial.jpg" alt="">
+                  </div>
+      
+                  <div class="columns_col-right">
+                    <p class="card__title">
+                      Kyle Burton
+                    </p>
 
-            </div> <!-- / .testimonial-header -->
-          </blockquote>
-
-        </div> <!-- /.section-primary -->
-  
-        <div class="section-secondary">
-          <img src="images/illustration-2.svg" alt="">
-        </div>
+                    <p class="card__subtitle">
+                      Founder & CEO, Huddle
+                    </p>
+                  </div>
+                </div> <!-- / .columns -->
+              </div> <!-- / .card__header -->
+            </div> <!-- / .card -->
+          </div> <!-- / .columns__column-left -->
+    
+          <div class="columns__col-right">
+            <img clsrc="images/illustration-2.svg" alt="">
+          </div>
+        </div> <!-- / .columns -->
       </div> <!-- / .container -->
     </section> <!-- / .section-feature-->
       
-    <section class="section-cta">
-      <div class="container flex">
-        <div class="section-primary">
-          <h2>Get early access today</h2>
-          <p>
-            It only takes a minute to sign up and our free starter tier is extremely generous. 
-            If you have any questions, our support team would be happy to help you.
-          </p>
-        </div>
+    <section class="cta">
+      <div class="container">
+        <div class="columns">
+          <div class="columns-col-left">
+            <h2 class="cta__title">Get early access today</h2>
 
-        <div class="section-secondary">
-          <input type="email" aria-label="Email Address" placeholder="email@example.com">
-          <button class="btn btn-primary" type="submit">Get Started For Free</button>
-        </div>
-      </div>
-    </section> <!-- / .section-cta -->
+            <p class="cta__copy">
+              It only takes a minute to sign up and our free starter tier is extremely generous. 
+              If you have any questions, our support team would be happy to help you.
+            </p>
+          </div>
+  
+          <div class="columns-col-right">
+            <form class="form" action="#" method="post"></form>
+              <input class="form__input" type="email" aria-label="Email Address" placeholder="email@example.com">
+
+              <button class="btn btn--color-blue" type="submit">Get Started For Free</button>
+            </form>
+          </div> <!-- / .columns-column-right -->
+        </div> <!-- / .columns -->
+      </div> <!-- / .container -->
+    </section> <!-- / .cta -->
   </main>
   
   <footer class="footer">
-    <div class="container flex">
-      <div class="footer-col-1">
-        <a href="#">
-          <img src="images/logo.svg" alt="Fylo logo">
-        </a>
-        <p>Phone: +1-543-123-4567</p>
-        <p>example@fylo.com</p>
-      </div>
-      
-      <div class="footer-col-2">
-        <ul>
-          <li><a href="#">About Us</a></li>
-          <li><a href="#">Jobs</a></li>
-          <li><a href="#">Press</a></li>
-          <li><a href="#">Blog</a></li>
-        </ul>
-      </div>
+    <div class="container">
+      <div class="columns">
 
-      <div class="footer-col-3">
-        <ul>
-          <li><a href="#">Contact Us</a></li>
-          <li><a href="#">Terms</a></li>
-          <li><a href="#">Privacy</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-col-4">
-        <ul>
-          <li>
-            <a href="#">
-            </a>
-          </li>
-
-          <li>
-            
-            <a href="#">
-            </a>
-          </li>
-
-          <li>
-            <a href="#">
-            </a>
-          </li>
-        </ul>
-      </div> <!-- / .footer-col-4 -->
+        <div class="columns__col-1">
+          <a class="footer__link" ref="#">
+            <img class="logo logo--light" src="images/logo.svg" alt="Fylo logo">
+          </a>
+          <p>Phone: +1-543-123-4567</p>
+          <p>example@fylo.com</p>
+        </div>
+        
+        <div class="columns__col-2">
+          <ul>
+            <li><a class="footer__link" href="#">About Us</a></li>
+            <li><a class="footer__link" href="#">Jobs</a></li>
+            <li><a class="footer__link" href="#">Press</a></li>
+            <li><a class="footer__link" href="#">Blog</a></li>
+          </ul>
+        </div>
+  
+        <div class="columns__col-3">
+          <ul>
+            <li><a class="footer__link" href="#">Contact Us</a></li>
+            <li><a class="footer__link" href="#">Terms</a></li>
+            <li><a class="footer__link" href="#">Privacy</a></li>
+          </ul>
+        </div>
+  
+        <div class="columns__col-4">
+          <ul class="social-links">
+            <li>
+              <a class="social-links__facebook" href="#">
+              </a>
+            </li>
+  
+            <li>
+              <a class="social-links__twitter" href="#">
+              </a>
+            </li>
+  
+            <li>
+              <a class="social-links__instagram" href="#">
+              </a>
+            </li>
+          </ul>
+        </div> <!-- / .columns__col-4 -->
+      </div> <!-- / .columns -->
     </div> <!-- / .container -->
   </footer>
 </body>
