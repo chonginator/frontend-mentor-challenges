@@ -4,12 +4,18 @@ import Logo from "./Logo";
 export default {
     title: "Components/Logo",
     component: Logo,
+    argTypes: {
+        size: {
+            control: "select",
+            options: ["large", "small"]
+        }
+    }
 } as ComponentMeta<typeof Logo>
 
 const Template: ComponentStory<typeof Logo> = (args) => <Logo {...args} />;
 
-export const Default = Template.bind({});
-Default.args = {
+export const Large = Template.bind({});
+Large.args = {
     size: "large"
 }
 
