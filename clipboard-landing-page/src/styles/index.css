@@ -3,15 +3,15 @@
 @tailwind utilities;
 
 @layer components {
-    .btn {
-        @apply w-full md:w-fit font-sans rounded-3xl px-8 py-3 shadow-button-inner 
-    }
+  .btn {
+    @apply w-full md:w-fit font-sans rounded-3xl px-8 py-3 shadow-button-inner;
+  }
 
-    .btn-primary {
-        @apply text-white bg-strongCyan-500 drop-shadow-strongCyan-xl active:bg-strongCyan-300
-    }
+  .btn-primary {
+    @apply text-white bg-strongCyan-500 drop-shadow-strongCyan-xl active:bg-strongCyan-300;
+  }
 
-    .btn-secondary {
-        @apply text-white bg-lightBlue-500 drop-shadow-black-xl active:bg-lightBlue-300
-    }
+  .btn-secondary {
+    @apply text-white bg-lightBlue-500 drop-shadow-black-xl active:bg-lightBlue-300;
+  }
 }
