@@ -1,14 +1,8 @@
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 import Icon from "./Icon";
+import { socialIconNames, featureIconNames } from "../../constants/iconNames";
 
-const iconNames = [
-  "facebook",
-  "twitter",
-  "instagram",
-  "blacklist",
-  "text",
-  "preview",
-];
+const iconNames = [...socialIconNames, ...featureIconNames];
 
 export default {
   title: "Components/Icon",
@@ -46,5 +40,4 @@ export const Playground = Template.bind({});
 Playground.args = {
   name: "facebook",
   size: 24,
-  color: "#4C545C",
 };
