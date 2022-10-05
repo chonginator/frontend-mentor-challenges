@@ -1,7 +1,14 @@
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 import Icon from "./Icon";
 
-const iconNames = ["facebook", "twitter", "instagram"];
+const iconNames = [
+  "facebook",
+  "twitter",
+  "instagram",
+  "blacklist",
+  "text",
+  "preview",
+];
 
 export default {
   title: "Components/Icon",
