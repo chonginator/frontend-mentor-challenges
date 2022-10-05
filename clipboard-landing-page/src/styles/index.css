@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  body {
+    @apply text-darkGrayishBlue;
+  }
+}
+
 @layer components {
   .btn {
     @apply w-full md:w-fit font-sans rounded-3xl px-8 py-3 shadow-button-inner;
