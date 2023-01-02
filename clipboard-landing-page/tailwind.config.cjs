@@ -31,9 +31,6 @@ module.exports = {
         "strongCyan-xl": `0 10px 20px ${theme("colors.strongCyan.100")}`,
         "black-xl": `0 10px 20px rgba(0, 0, 0, 9.88%)`,
       }),
-      boxShadow: {
-        "button-inner": `inset 0 -3px 0 0 rgba(0, 0, 0, 15.13%)`,
-      },
     },
   },
   plugins: [],

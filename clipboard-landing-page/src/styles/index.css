@@ -13,10 +13,6 @@ body {
 }
 
 @layer components {
-  .btn {
-    @apply shadow-button-inner;
-  }
-
   .btn-primary {
     @apply bg-strongCyan-500 text-white drop-shadow-strongCyan-xl active:bg-strongCyan-300;
   }
