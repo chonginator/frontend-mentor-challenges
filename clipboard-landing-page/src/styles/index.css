@@ -3,16 +3,18 @@
 @tailwind utilities;
 
 :root {
+  --font-sans: "Bai Jamjuree", sans-serif;
   --colour-dark-grayish-blue: hsl(210, 10%, 33%);
 }
 
 body {
+  font-family: var(--font-sans);
   color: var(--colour-dark-grayish-blue);
 }
 
 @layer components {
   .btn {
-    @apply font-sans shadow-button-inner;
+    @apply shadow-button-inner;
   }
 
   .btn-primary {
