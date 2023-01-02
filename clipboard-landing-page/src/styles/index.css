@@ -2,22 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  body {
-    @apply text-darkGrayishBlue;
-  }
+:root {
+  --colour-dark-grayish-blue: hsl(210, 10%, 33%);
+}
+
+body {
+  color: var(--colour-dark-grayish-blue);
 }
 
 @layer components {
   .btn {
-    @apply w-full md:w-fit font-sans rounded-3xl px-8 py-3 shadow-button-inner;
+    @apply w-full rounded-3xl px-8 py-3 font-sans shadow-button-inner md:w-fit;
   }
 
   .btn-primary {
-    @apply text-white bg-strongCyan-500 drop-shadow-strongCyan-xl active:bg-strongCyan-300;
+    @apply bg-strongCyan-500 text-white drop-shadow-strongCyan-xl active:bg-strongCyan-300;
   }
 
   .btn-secondary {
-    @apply text-white bg-lightBlue-500 drop-shadow-black-xl active:bg-lightBlue-300;
+    @apply bg-lightBlue-500 text-white drop-shadow-black-xl active:bg-lightBlue-300;
   }
 }
