@@ -12,7 +12,7 @@ body {
 
 @layer components {
   .btn {
-    @apply rounded-3xl px-8 py-3 font-sans shadow-button-inner;
+    @apply px-8 py-3 font-sans shadow-button-inner;
   }
 
   .btn-primary {
