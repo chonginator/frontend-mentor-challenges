@@ -5,6 +5,7 @@
 :root {
   --font-sans: "Bai Jamjuree", sans-serif;
   --colour-dark-grayish-blue: hsl(210, 10%, 33%);
+  --colour-strong-cyan-500: hsl(171, 66%, 44%);
 }
 
 body {

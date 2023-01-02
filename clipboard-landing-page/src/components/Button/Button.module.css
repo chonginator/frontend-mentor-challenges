@@ -13,4 +13,5 @@
 
 .btn-primary {
   composes: btn;
+  background-color: var(--colour-strong-cyan-500);
 }
