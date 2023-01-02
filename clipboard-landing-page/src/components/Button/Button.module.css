@@ -1,0 +1,19 @@
+.btn {
+  width: 100%;
+  /* border-radius: 28px; */
+  /* padding: 12px 36px; */
+
+  /* @media (min-width: var(--breakpoints["md"])) { */
+  /* width: fit-content; */
+  /* } */
+}
+
+@media (min-width: 768px) {
+  .btn {
+    width: fit-content;
+  }
+}
+
+.btn-primary {
+  composes: btn;
+}
