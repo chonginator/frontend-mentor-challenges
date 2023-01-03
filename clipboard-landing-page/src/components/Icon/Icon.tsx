@@ -4,7 +4,7 @@ import Icons from "../../assets/images/icons-sprite-map.svg";
 
 const Icon = ({ name, size = 24 }: IconProps) => {
   return (
-    <svg width={size} height={size} className="fill-current">
+    <svg width={size} height={size} className={styles.icon}>
       <use href={`${Icons}#${name}`} />
     </svg>
   );
