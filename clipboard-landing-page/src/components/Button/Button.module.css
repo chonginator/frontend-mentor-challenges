@@ -25,6 +25,7 @@
 .btn-secondary {
   composes: btn;
   background-color: var(--colour-light-blue-500);
+  filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 9.88%));
 }
 
 .btn-secondary:active {
