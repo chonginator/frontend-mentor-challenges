@@ -1,6 +1,6 @@
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 import Icon from "./Icon";
-import { socialIconNames, featureIconNames } from "../../constants/iconNames";
+import { socialIconNames, featureIconNames } from "./iconNames";
 
 const iconNames = [...socialIconNames, ...featureIconNames];
 

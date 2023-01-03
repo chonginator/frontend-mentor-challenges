@@ -1,6 +1,6 @@
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 import IconButton from "./IconButton";
-import { socialIconNames } from "../../constants/iconNames";
+import { socialIconNames } from "../Icon/iconNames";
 
 export default {
   title: "Components/IconButton",
