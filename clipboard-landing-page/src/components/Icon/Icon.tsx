@@ -1,9 +1,10 @@
 import { IconProps } from "./IconProps";
+import styles from "./Icon.module.css";
 import Icons from "../../assets/images/icons-sprite-map.svg";
 
-const Icon = ({ name, color, size = 24 }: IconProps) => {
+const Icon = ({ name, size = 24 }: IconProps) => {
   return (
-    <svg width={size} height={size} className="fill-current" style={{ color }}>
+    <svg width={size} height={size} className="fill-current">
       <use href={`${Icons}#${name}`} />
     </svg>
   );
