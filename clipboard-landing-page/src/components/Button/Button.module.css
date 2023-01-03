@@ -16,6 +16,10 @@
   background-color: var(--colour-strong-cyan-500);
 }
 
+.btn-primary:active {
+  background-color: var(--colour-strong-cyan-300);
+}
+
 .btn-secondary {
   composes: btn;
   background-color: var(--colour-light-blue-500);

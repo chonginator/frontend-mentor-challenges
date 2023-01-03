@@ -5,6 +5,7 @@
 :root {
   --font-sans: "Bai Jamjuree", sans-serif;
   --colour-dark-grayish-blue: hsl(210, 10%, 33%);
+  --colour-strong-cyan-300: hsla(171, 66%, 44%, 74.65%);
   --colour-strong-cyan-500: hsl(171, 66%, 44%);
   --colour-light-blue-300: hsla(233, 100%, 69%, 75.12%);
   --colour-light-blue-500: hsl(233, 100%, 69%);
@@ -17,7 +18,7 @@ body {
 
 @layer components {
   .btn-primary {
-    @apply text-white drop-shadow-strongCyan-xl active:bg-strongCyan-300;
+    @apply text-white drop-shadow-strongCyan-xl;
   }
 
   .btn-secondary {
