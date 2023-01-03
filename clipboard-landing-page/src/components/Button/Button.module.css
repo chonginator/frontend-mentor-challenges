@@ -15,3 +15,8 @@
   composes: btn;
   background-color: var(--colour-strong-cyan-500);
 }
+
+.btn-secondary {
+  composes: btn;
+  background-color: var(--colour-light-blue-500);
+}
