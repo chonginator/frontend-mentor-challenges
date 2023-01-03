@@ -3,7 +3,7 @@ import styles from "./IconButton.module.css";
 import { IconButtonProps } from "./IconButtonProps";
 
 const IconButton = ({ name, href, size = 24 }: IconButtonProps) => (
-  <a href={href} target="_blank" className={`${styles.iconButton} transition`}>
+  <a href={href} target="_blank" className={`${styles.iconButton}`}>
     <Icon name={name} size={size} />
   </a>
 );
