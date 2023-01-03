@@ -6,7 +6,11 @@ const Button = ({ children, variant = "primary" }: ButtonProps) => {
     variant === "primary" ? "btn-primary" : "btn-secondary";
 
   return (
-    <button className={`${styles.btn} ${variantClassName}`}>{children}</button>
+    <button
+      className={`${styles.btn} ${variantClassName} ${styles[variantClassName]}`}
+    >
+      {children}
+    </button>
   );
 };
 
