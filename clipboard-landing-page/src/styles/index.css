@@ -18,10 +18,6 @@ body {
 }
 
 @layer components {
-  .btn-primary {
-    @apply drop-shadow-strongCyan-xl;
-  }
-
   .btn-secondary {
     @apply drop-shadow-black-xl;
   }
