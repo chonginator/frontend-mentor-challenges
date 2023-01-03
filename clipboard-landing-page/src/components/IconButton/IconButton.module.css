@@ -1,3 +1,8 @@
 .iconButton {
   display: inline-block;
 }
+
+.iconButton:focus,
+.iconButton:hover {
+  color: var(--colour-strong-cyan-500);
+}
