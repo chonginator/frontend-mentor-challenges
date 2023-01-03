@@ -4,6 +4,10 @@
 
 :root {
   --font-sans: "Bai Jamjuree", sans-serif;
+
+  --font-regular: 400;
+  --font-semibold: 600;
+
   --colour-white: hsl(0 0% 95%);
   --colour-dark-grayish-blue: hsl(210, 10%, 33%);
   --colour-strong-cyan-300: hsla(171, 66%, 44%, 74.65%);
