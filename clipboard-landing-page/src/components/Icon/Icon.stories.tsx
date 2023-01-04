@@ -1,6 +1,7 @@
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 import Icon from "./Icon";
 import { socialIconNames, featureIconNames } from "./iconNames";
+import styles from "./Icon.stories.module.css";
 
 const iconNames = [...socialIconNames, ...featureIconNames];
 
@@ -27,13 +28,13 @@ const Template: ComponentStory<typeof Icon> = (args) => <Icon {...args} />;
 
 export const AllIcons = () => {
   const icons = iconNames.map((name) => (
-    <div key={name} className="flex flex-col items-center">
+    <div key={name} className={styles.iconContainer}>
       <Icon name={name} />
       <p>{name}</p>
     </div>
   ));
 
-  return <div className="flex flex-row gap-8">{icons}</div>;
+  return <div className={styles.iconsContainer}>{icons}</div>;
 };
 
 export const Playground = Template.bind({});
