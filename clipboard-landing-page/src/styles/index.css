@@ -19,3 +19,7 @@ body {
   color: var(--colour-dark-grayish-blue);
   line-height: 1.5;
 }
+
+a {
+  color: inherit;
+}
