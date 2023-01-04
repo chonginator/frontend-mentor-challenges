@@ -1,4 +1,4 @@
-@tailwind base;
+@import "reset.css";
 
 :root {
   --font-sans: "Bai Jamjuree", sans-serif;
@@ -17,9 +17,4 @@
 body {
   font-family: var(--font-sans);
   color: var(--colour-dark-grayish-blue);
-  line-height: 1.5;
-}
-
-a {
-  color: inherit;
 }
