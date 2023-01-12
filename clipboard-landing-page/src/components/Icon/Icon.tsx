@@ -1,6 +1,6 @@
 import { IconProps } from "./IconProps";
 import styles from "./Icon.module.css";
-import Icons from "../../assets/images/icons-sprite-map.svg";
+import Icons from "/images/icons-sprite-map.svg";
 
 const Icon = ({ name, size = 24 }: IconProps) => {
   return (

@@ -1,4 +1,4 @@
-import LogoImage from "../../assets/images/logo.svg";
+import LogoImage from "/images/logo.svg";
 
 interface LogoProps {
   size?: "small" | "large";
