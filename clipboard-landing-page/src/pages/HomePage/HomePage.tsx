@@ -1,5 +1,6 @@
 import styles from "./HomePage.module.css";
 import Logo from "../../components/Logo";
+import Button from "../../components/Button";
 
 const HomePage = () => {
   return (
