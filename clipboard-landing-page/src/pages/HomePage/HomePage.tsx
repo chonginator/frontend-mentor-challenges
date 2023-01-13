@@ -1,81 +1,151 @@
 import styles from "./HomePage.module.css";
 import Logo from "../../components/Logo";
 import Button from "../../components/Button";
+import Icon from "../../components/Icon";
+import IconButton from "../../components/IconButton";
 
 const HomePage = () => {
   return (
-    <main className={styles.container}>
-      <Logo />
+    <>
+      <main className={styles.container}>
+        <Logo />
+        <h1>Hello there!</h1>
+        <section>
+          <h1>A history of everything you copy</h1>
+          <p>
+            Clipboard allows you to track and organize everything you copy.
+            Instantly access your clipboard on all your devices.
+          </p>
+          <div>
+            <Button>Download for iOS</Button>
+            <Button variant="secondary">Download for Mac</Button>
+          </div>
+        </section>
+        <section>
+          <h2>Keep track of your snippets</h2>
+          <p>
+            Clipboard instantly stores any item you copy in the cloud, meaning
+            you can access your snippets immediately on all your devices. Our
+            Mac and iOS apps will help you organize everything.
+          </p>
+          <div>
+            <img src="/images/image-computer.png" alt="iMac computer" />
 
-      <h1>Hello there!</h1>
+            <div>
+              <h3>Quick Search</h3>
+              <p>
+                Easily search your snippets by content, category, web address,
+                application, and more.
+              </p>
+            </div>
+            <div>
+              <h3>iCloud Sync</h3>
+              <p>Instantly saves and syncs snippets across all your devices.</p>
+            </div>
+            <div>
+              <h3>Complete History</h3>
+              <p>
+                Retrieve any snippets from the first moment you started using
+                the app.
+              </p>
+            </div>
+          </div>
+        </section>
+        <section>
+          <h2>Access Clipboard Anywhere</h2>
+          <p>
+            Whether you're on the go, or at your computer, you can access all
+            your Clipboard snippets in a few simple clicks.
+          </p>
+          <img src="/images/image-devices.png" alt="iPhone and an iPad" />
+        </section>
+        <section>
+          <h2>Supercharge Your Workflow</h2>
+          <p>We've got the tools to boost your productivity.</p>
+          <div>
+            <div>
+              <Icon name="blacklist" />
+              <h3>Create blacklists</h3>
+              <p>
+                Ensure sensitive information never makes its way to your
+                clipboard by excluding certain sources.
+              </p>
+            </div>
+            <div>
+              <Icon name="text" />
+              <h3>Plain text snippets</h3>
+              <p>
+                Remove unwanted formatting from copied text for a consistent
+                look.
+              </p>
+            </div>
+            <div>
+              <Icon name="preview" />
+              <h3>Sneak preview</h3>
+              <p>
+                Quick preview of all snippets on your Clipboard for easy access.
+              </p>
+            </div>
+          </div>
+        </section>
 
-      <section>
-        <h1>A history of everything you copy</h1>
-        <p>
-          Clipboard allows you to track and organize everything you 
-          copy. Instantly access your clipboard on all your devices.
-        </p>
-      </section>
+        <div>
+          <img src="/images/logo-google.png" alt="Google logo" />
+          <img src="/images/logo-ibm.png" alt="IBM logo" />
+          <img src="/images/logo-microsoft.png" alt="Microsoft logo" />
+          <img src="/images/logo-hp.png" alt="Hewlett-Packard logo" />
+          <img
+            src="/images/logo-vector-graphics.png"
+            alt="Vector Graphics logo"
+          />
+        </div>
 
+        <section>
+          <h2>Clipboard for iOS and Mac OS</h2>
+          <p>
+            Available for free on the App Store. Download for Mac or iOS, sync
+            with iCloud and you're ready to start adding to your clipboard.
+          </p>
+          <div>
+            <Button>Download for iOS</Button>
+            <Button variant="secondary">Download for Mac</Button>
+          </div>
+        </section>
+      </main>
 
-
-  Download for iOS
-  Download for Mac
-
-  Keep track of your snippets
-
-  Clipboard instantly stores any item you copy in the cloud, 
-  meaning you can access your snippets immediately on all your 
-  devices. Our Mac and iOS apps will help you organize everything.
-
-  Quick Search
-
-  Easily search your snippets by content, category, web address, application, and more.
-
-  iCloud Sync
-
-  Instantly saves and syncs snippets across all your devices.
-
-  Complete History
-
-  Retrieve any snippets from the first moment you started using the app.
-
-  Access Clipboard anywhere
-
-  Whether you’re on the go, or at your computer, you can access all your Clipboard 
-  snippets in a few simple clicks.
-
-  Supercharge your workflow
-
-  We’ve got the tools to boost your productivity.
-
-  Create blacklists
-
-  Ensure sensitive information never makes its way to your clipboard by excluding certain sources.
-
-  Plain text snippets
-
-  Remove unwanted formatting from copied text for a consistent look.
-
-  Sneak preview
-
-  Quick preview of all snippets on your Clipboard for easy access.
-
-  Clipboard for iOS and Mac OS
-
-  Available for free on the App Store. Download for Mac or iOS, sync with iCloud 
-  and you’re ready to start adding to your clipboard.
-
-  Download for iOS
-  Download for Mac
-
-  FAQs
-  Contact Us
-  Privacy Policy
-  Press Kit
-  Install Guide
-    </main>
-  )
-}
+      <footer>
+        <Logo size="small" />
+        <ul>
+          <li>
+            <a>FAQs</a>
+          </li>
+          <li>
+            <a>Contact Us</a>
+          </li>
+          <li>
+            <a>Privacy Policy</a>
+          </li>
+          <li>
+            <a>Press Kit</a>
+          </li>
+          <li>
+            <a>Install Guide</a>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <IconButton name="facebook" href="https://www.facebook.com/" />
+          </li>
+          <li>
+            <IconButton name="twitter" href="https://www.twitter.com/" />
+          </li>
+          <li>
+            <IconButton name="instagram" href="https://www.instagram.com/" />
+          </li>
+        </ul>
+      </footer>
+    </>
+  );
+};
 
 export { HomePage };
