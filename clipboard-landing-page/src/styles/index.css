@@ -8,6 +8,7 @@
 
   --colour-white: hsl(0 0% 95%);
   --colour-dark-grayish-blue: hsl(210, 10%, 33%);
+  --colour-light-grayish-blue: hsl(201, 11%, 66%);
   --colour-strong-cyan-300: hsla(171, 66%, 44%, 74.65%);
   --colour-strong-cyan-500: hsl(171, 66%, 44%);
   --colour-light-blue-300: hsla(233, 100%, 69%, 75.12%);
@@ -16,5 +17,39 @@
 
 body {
   font-family: var(--font-sans);
+  color: var(--colour-light-grayish-blue);
+}
+
+footer {
+  font-size: 1.125rem;
   color: var(--colour-dark-grayish-blue);
+}
+
+h1,
+h2,
+h3 {
+  color: var(--colour-dark-grayish-blue);
+  font-weight: var(--font-semibold);
+  text-align: center;
+}
+
+h1 {
+  font-size: 2rem;
+  line-height: 40px;
+}
+
+h2 {
+  font-size: 1.75rem;
+  line-height: 35px;
+}
+
+h3 {
+  font-size: 1.5rem;
+  line-height: 30px;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 26px;
+  text-align: center;
 }

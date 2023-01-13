@@ -9,7 +9,6 @@ const HomePage = () => {
     <>
       <main className={styles.container}>
         <Logo />
-        <h1>Hello there!</h1>
         <section>
           <h1>A history of everything you copy</h1>
           <p>
