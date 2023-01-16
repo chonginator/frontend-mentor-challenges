@@ -2,24 +2,14 @@ import styles from "./HomePage.module.css";
 import Logo from "../../components/Logo";
 import Button from "../../components/Button";
 import Icon from "../../components/Icon";
+import Hero from "../../components/Hero";
 import Footer from "../../components/Footer";
 
 const HomePage = () => {
   return (
     <>
       <main className={styles.container}>
-        <Logo />
-        <section>
-          <h1>A history of everything you copy</h1>
-          <p>
-            Clipboard allows you to track and organize everything you copy.
-            Instantly access your clipboard on all your devices.
-          </p>
-          <div>
-            <Button>Download for iOS</Button>
-            <Button variant="secondary">Download for Mac</Button>
-          </div>
-        </section>
+        <Hero />
         <section>
           <h2>Keep track of your snippets</h2>
           <p>
