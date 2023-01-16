@@ -2,7 +2,7 @@ import styles from "./HomePage.module.css";
 import Logo from "../../components/Logo";
 import Button from "../../components/Button";
 import Icon from "../../components/Icon";
-import IconButton from "../../components/IconButton";
+import Footer from "../../components/Footer";
 
 const HomePage = () => {
   return (
@@ -112,37 +112,7 @@ const HomePage = () => {
         </section>
       </main>
 
-      <footer>
-        <Logo size="small" />
-        <ul>
-          <li>
-            <a>FAQs</a>
-          </li>
-          <li>
-            <a>Contact Us</a>
-          </li>
-          <li>
-            <a>Privacy Policy</a>
-          </li>
-          <li>
-            <a>Press Kit</a>
-          </li>
-          <li>
-            <a>Install Guide</a>
-          </li>
-        </ul>
-        <ul>
-          <li>
-            <IconButton name="facebook" href="https://www.facebook.com/" />
-          </li>
-          <li>
-            <IconButton name="twitter" href="https://www.twitter.com/" />
-          </li>
-          <li>
-            <IconButton name="instagram" href="https://www.instagram.com/" />
-          </li>
-        </ul>
-      </footer>
+      <Footer />
     </>
   );
 };
