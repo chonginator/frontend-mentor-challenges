@@ -7,6 +7,7 @@ import FeatureSection from "../../components/FeatureSection";
 import featureSectionSnippetsData from "../../components/FeatureSection/featureSectionSnippetsData";
 import featureSectionAccessData from "../../components/FeatureSection/featureSectionAccessData";
 import featureSectionWorkflowData from "../../components/FeatureSection/featureSectionWorkflowData";
+import TestimonialBanner from "../../components/TestimonialBanner";
 import Footer from "../../components/Footer";
 
 const HomePage = () => {
@@ -18,16 +19,7 @@ const HomePage = () => {
         <FeatureSection data={featureSectionAccessData} />
         <FeatureSection data={featureSectionWorkflowData} />
 
-        <div>
-          <img src="/images/logo-google.png" alt="Google logo" />
-          <img src="/images/logo-ibm.png" alt="IBM logo" />
-          <img src="/images/logo-microsoft.png" alt="Microsoft logo" />
-          <img src="/images/logo-hp.png" alt="Hewlett-Packard logo" />
-          <img
-            src="/images/logo-vector-graphics.png"
-            alt="Vector Graphics logo"
-          />
-        </div>
+        <TestimonialBanner />
 
         <section>
           <h2>Clipboard for iOS and Mac OS</h2>
