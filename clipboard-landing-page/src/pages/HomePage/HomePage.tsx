@@ -16,9 +16,7 @@ const HomePage = () => {
         <FeatureSection data={featureSectionSnippetsData} />
         <FeatureSection data={featureSectionAccessData} />
         <FeatureSection data={featureSectionWorkflowData} />
-
         <TestimonialBanner />
-
         <CTA />
       </main>
 

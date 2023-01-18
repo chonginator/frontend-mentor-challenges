@@ -13,4 +13,5 @@ export const parameters = {
       method: "alphabetical",
     },
   },
+  layout: "fullscreen",
 };
