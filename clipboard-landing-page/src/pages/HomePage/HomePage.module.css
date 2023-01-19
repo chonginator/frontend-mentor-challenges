@@ -1,7 +1,14 @@
 .container {
-  background-image: url("/images/bg-header-desktop.png");
+  background-image: url("/images/bg-header-mobile.png");
   background-repeat: no-repeat;
+  background-size: contain;
   padding: 0 2em;
   display: grid;
   gap: 150px;
+}
+
+@media (min-width: 768px) {
+  .container {
+    background-image: url("/images/bg-header-desktop.png");
+  }
 }
