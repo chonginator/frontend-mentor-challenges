@@ -40,5 +40,6 @@ const SnippetsFeatures = (
 
 export const Default = Template.bind({});
 Default.args = {
-  children: [SnippetsFeatureImage, SnippetsFeatures],
+  left: SnippetsFeatureImage,
+  right: SnippetsFeatures,
 };
