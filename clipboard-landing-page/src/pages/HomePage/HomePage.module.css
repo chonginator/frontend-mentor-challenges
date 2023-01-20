@@ -2,7 +2,7 @@
   background-image: url("/images/bg-header-mobile.png");
   background-repeat: no-repeat;
   background-size: contain;
-  padding: 0 2em;
+  padding: 0 32px;
   display: grid;
   gap: 150px;
 }
@@ -10,5 +10,6 @@
 @media (min-width: 768px) {
   .container {
     background-image: url("/images/bg-header-desktop.png");
+    padding: 0 165px;
   }
 }
