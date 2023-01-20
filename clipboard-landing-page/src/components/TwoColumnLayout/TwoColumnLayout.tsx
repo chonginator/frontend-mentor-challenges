@@ -1,11 +1,17 @@
 import styles from "./TwoColumnLayout.module.css";
 
 interface TwoColumnLayoutProps {
-  children: React.ReactNode;
+  left: React.ReactNode;
+  right: React.ReactNode;
 }
 
-const TwoColumnLayout = ({ children }: TwoColumnLayoutProps) => {
-  return <div className={styles.bodyContainer}>{children}</div>;
+const TwoColumnLayout = ({ left, right }: TwoColumnLayoutProps) => {
+  return (
+    <div className={styles.container}>
+      {left}
+      {right}
+    </div>
+  );
 };
 
 export default TwoColumnLayout;

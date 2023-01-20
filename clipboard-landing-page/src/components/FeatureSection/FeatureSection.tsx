@@ -34,26 +34,29 @@ function FeatureSection(props: FeatureSectionProps) {
         <p className={styles.subtitle}>{subtitle}</p>
       </div>
       <div className={styles.fullBleedContainer}>
-        <TwoColumnLayout>
-          <img
-            className={styles.featureImage}
-            src={image?.src}
-            // sizes={"(min-width: 768px) 752px, 312px"}
-            alt={image?.alt}
-          />
-
-          <div className={styles.featureContainer}>
-            {features?.map((feature) => (
-              <div className={styles.feature}>
-                {feature.iconName && <Icon name={feature.iconName} />}
-                <h3 className={styles.featureTitle}>{feature.title}</h3>
-                <p className={styles.featureDescription}>
-                  {feature.description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </TwoColumnLayout>
+        <TwoColumnLayout
+          left={
+            <img
+              className={styles.featureImage}
+              src={image?.src}
+              // sizes={"(min-width: 768px) 752px, 312px"}
+              alt={image?.alt}
+            />
+          }
+          right={
+            <div className={styles.featureContainer}>
+              {features?.map((feature) => (
+                <div className={styles.feature}>
+                  {feature.iconName && <Icon name={feature.iconName} />}
+                  <h3 className={styles.featureTitle}>{feature.title}</h3>
+                  <p className={styles.featureDescription}>
+                    {feature.description}
+                  </p>
+                </div>
+              ))}
+            </div>
+          }
+        />
       </div>
     </section>
   );
