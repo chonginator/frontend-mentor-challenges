@@ -1,4 +1,5 @@
 import Icon from "../Icon";
+import TwoColumnLayout from "../TwoColumnLayout";
 import styles from "./FeatureSection.module.css";
 
 interface FeatureSectionProps {
@@ -17,7 +18,7 @@ type Image = {
   alt: string;
 };
 
-type Feature = {
+export type Feature = {
   title: string;
   description: string;
   iconName?: string;
@@ -33,7 +34,7 @@ function FeatureSection(props: FeatureSectionProps) {
         <p className={styles.subtitle}>{subtitle}</p>
       </div>
       <div className={styles.fullBleedContainer}>
-        <div className={styles.bodyContainer}>
+        <TwoColumnLayout>
           <img
             className={styles.featureImage}
             src={image?.src}
@@ -52,7 +53,7 @@ function FeatureSection(props: FeatureSectionProps) {
               </div>
             ))}
           </div>
-        </div>
+        </TwoColumnLayout>
       </div>
     </section>
   );

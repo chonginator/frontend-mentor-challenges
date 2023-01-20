@@ -1,0 +1,14 @@
+.bodyContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 65px;
+}
+
+@media (min-width: 768px) {
+  .bodyContainer {
+    display: grid;
+    grid-template-columns: calc(50% + 29px) calc(50% - 29px);
+    align-items: stretch;
+  }
+}
