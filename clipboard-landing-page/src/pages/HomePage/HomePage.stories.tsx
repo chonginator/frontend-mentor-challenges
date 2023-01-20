@@ -7,12 +7,12 @@ export default {
   parameters: {
     design: {
       type: "figspec",
-      url: "https://www.figma.com/file/JULngfX5WXYZmDmIhM9jk3/clipboard-landing-page?t=JzBfWhFg4ZGSGn63-6"
-    }
-  }
-} as ComponentMeta<typeof HomePage>
+      url: "https://www.figma.com/file/JULngfX5WXYZmDmIhM9jk3/clipboard-landing-page?t=JzBfWhFg4ZGSGn63-6",
+    },
+    layout: "fullscreen",
+  },
+} as ComponentMeta<typeof HomePage>;
 
-const Template: ComponentStory<typeof HomePage> = () => <HomePage />
+const Template: ComponentStory<typeof HomePage> = () => <HomePage />;
 
-export const Default = Template.bind({})
-
+export const Default = Template.bind({});
