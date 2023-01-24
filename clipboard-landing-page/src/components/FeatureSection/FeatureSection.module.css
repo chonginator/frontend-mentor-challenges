@@ -11,11 +11,21 @@
   gap: 16px;
 }
 
+.featureSectionBody {
+  margin-top: 56px;
+}
+
 @media (min-width: 768px) {
   .fullBleedLayout {
     margin-left: -165px;
     margin-right: -165px;
   }
+}
+
+.singleColumnLayout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .featureImage {
@@ -26,38 +36,60 @@
   .twoColumnLayout .featureImage {
     margin-left: -29px;
   }
+
+  .singleColumnLayout .featureContainer {
+    flex-direction: row;
+  }
 }
 
 .singleColumnLayout {
   align-self: center;
-  margin-top: 65px;
 }
 
 .featureContainer {
   display: flex;
   flex-direction: column;
-  margin-top: 56px;
+  gap: 48px;
+}
+
+.twoColumnLayout .featureContainer {
   margin-left: 0;
+}
+
+@media (min-width: 768px) {
+  .twoColumnLayout .featureContainer {
+    margin-left: 7%;
+    margin-top: 56px;
+  }
+}
+
+.feature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   max-width: 350px;
 }
 
 @media (min-width: 768px) {
-  .featureContainer {
-    margin-left: 7%;
+  .twoColumnLayout .feature {
+    align-items: flex-start;
   }
-}
-
-.feature:not(:first-child) {
-  margin-top: 48px;
 }
 
 .featureDescription {
   margin-top: 8px;
 }
 
+.featureIcon {
+  margin-bottom: 32px;
+}
+
 @media (min-width: 768px) {
-  .featureTitle,
-  .featureDescription {
+  .featureTitle {
+    text-align: left;
+  }
+
+  .twoColumnLayout .featureDescription {
     text-align: left;
   }
 

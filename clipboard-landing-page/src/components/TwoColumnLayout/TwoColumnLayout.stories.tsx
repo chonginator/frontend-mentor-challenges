@@ -40,6 +40,7 @@ const SnippetsFeatures = (
 
 export const Default = Template.bind({});
 Default.args = {
+  className: styles.twoColumnLayout,
   left: SnippetsFeatureImage,
   right: SnippetsFeatures,
 };

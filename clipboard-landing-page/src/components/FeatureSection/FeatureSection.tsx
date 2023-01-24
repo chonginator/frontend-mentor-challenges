@@ -35,7 +35,13 @@ function FeatureSection(props: FeatureSectionProps) {
     <div className={styles.featureContainer}>
       {features?.map((feature) => (
         <div className={styles.feature}>
-          {feature.iconName && <Icon name={feature.iconName} />}
+          {feature.iconName && (
+            <Icon
+              className={styles.featureIcon}
+              name={feature.iconName}
+              size={36}
+            />
+          )}
           <h3 className={styles.featureTitle}>{feature.title}</h3>
           <p className={styles.featureDescription}>{feature.description}</p>
         </div>
@@ -45,16 +51,21 @@ function FeatureSection(props: FeatureSectionProps) {
 
   const FeatureSectionBody = () => {
     return image && features ? (
-      <div className={styles.fullBleedLayout}>
-        <TwoColumnLayout
-          className={styles.twoColumnLayout}
-          left={<FeatureImage />}
-          right={<Features />}
-        />
+      <div className={styles.featureSectionBody}>
+        <div className={styles.fullBleedLayout}>
+          <TwoColumnLayout
+            className={styles.twoColumnLayout}
+            left={<FeatureImage />}
+            right={<Features />}
+          />
+        </div>
       </div>
     ) : (
-      <div className={styles.singleColumnLayout}>
-        <FeatureImage />
+      <div className={styles.featureSectionBody}>
+        <div className={styles.singleColumnLayout}>
+          <FeatureImage />
+          {features && <Features />}
+        </div>
       </div>
     );
   };
