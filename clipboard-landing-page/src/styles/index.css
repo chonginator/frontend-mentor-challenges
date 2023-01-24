@@ -53,3 +53,9 @@ p {
   line-height: 26px;
   text-align: center;
 }
+
+@media (min-width: 768px) {
+  p {
+    line-height: 30px;
+  }
+}
