@@ -54,12 +54,12 @@
 
 .twoColumnLayout .featureContainer {
   margin-left: 0;
+  margin-top: 56px;
 }
 
 @media (min-width: 768px) {
   .twoColumnLayout .featureContainer {
     margin-left: 7%;
-    margin-top: 56px;
   }
 }
 
@@ -85,7 +85,7 @@
 }
 
 @media (min-width: 768px) {
-  .featureTitle {
+  .twoColumnLayout .featureTitle {
     text-align: left;
   }
 
