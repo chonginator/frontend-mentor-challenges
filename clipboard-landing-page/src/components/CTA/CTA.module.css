@@ -1,28 +1,7 @@
 .container {
   display: flex;
   flex-direction: column;
-  margin-top: 124px;
   align-items: center;
-  gap: 64px;
-}
-
-.titleContainer {
-  max-width: 730px;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-@media (min-width: 768px) {
-  .title {
-    font-size: 2.875rem;
-  }
-}
-
-@media (min-width: 768px) {
-  .subtitle {
-    font-size: 1.25rem;
-  }
 }
 
 .buttonContainer {

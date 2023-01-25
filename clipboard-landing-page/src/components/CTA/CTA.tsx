@@ -1,19 +1,16 @@
 import Button from "../Button";
+import styles from "./CTA.module.css";
 
-const CTA = () => {
+function CTA({ children }: { children: React.ReactNode }) {
   return (
-    <section>
-      <h2>Clipboard for iOS and Mac OS</h2>
-      <p>
-        Available for free on the App Store. Download for Mac or iOS, sync with
-        iCloud and you're ready to start adding to your clipboard.
-      </p>
-      <div>
+    <section className={styles.container}>
+      {children}
+      <div className={styles.buttonContainer}>
         <Button>Download for iOS</Button>
         <Button variant="secondary">Download for Mac</Button>
       </div>
     </section>
   );
-};
+}
 
 export default CTA;

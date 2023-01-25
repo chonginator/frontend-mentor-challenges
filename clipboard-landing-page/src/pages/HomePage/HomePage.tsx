@@ -17,7 +17,15 @@ const HomePage = () => {
         <FeatureSection data={featureSectionAccessData} />
         <FeatureSection data={featureSectionWorkflowData} />
         <TestimonialBanner />
-        <CTA />
+        <CTA>
+          <div className={styles.titleContainer}>
+            <h2 className={styles.title}>Clipboard for iOS and Mac OS</h2>
+            <p className={styles.subtitle}>
+              Available for free on the App Store. Download for Mac or iOS, sync
+              with iCloud and you're ready to start adding to your clipboard.
+            </p>
+          </div>
+        </CTA>
       </main>
 
       <Footer />
