@@ -33,8 +33,8 @@ function FeatureSection(props: FeatureSectionProps) {
 
   const Features = () => (
     <div className={styles.featureContainer}>
-      {features?.map((feature) => (
-        <div className={styles.feature}>
+      {features?.map((feature, index) => (
+        <div key={index} className={styles.feature}>
           {feature.iconName && (
             <Icon
               className={styles.featureIcon}
