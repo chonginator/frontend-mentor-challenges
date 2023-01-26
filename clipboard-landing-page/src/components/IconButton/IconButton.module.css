@@ -5,7 +5,6 @@
   transition-duration: 150ms;
 }
 
-.iconButton:focus,
-.iconButton:hover {
+.iconButton:is(:focus, :hover) {
   color: var(--colour-strong-cyan-500);
 }

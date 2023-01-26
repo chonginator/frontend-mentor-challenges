@@ -8,19 +8,19 @@ const Footer = () => {
       <Logo size="small" />
       <ul className={styles.links}>
         <li>
-          <a>FAQs</a>
+          <a href="#">FAQs</a>
         </li>
         <li>
-          <a>Contact Us</a>
+          <a href="#">Contact Us</a>
         </li>
         <li>
-          <a>Privacy Policy</a>
+          <a href="#">Privacy Policy</a>
         </li>
         <li>
-          <a>Press Kit</a>
+          <a href="#">Press Kit</a>
         </li>
         <li>
-          <a>Install Guide</a>
+          <a href="#">Install Guide</a>
         </li>
       </ul>
       <ul className={styles.socialLinks}>

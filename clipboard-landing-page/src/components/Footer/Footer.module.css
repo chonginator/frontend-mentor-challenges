@@ -35,6 +35,16 @@
   gap: 20px;
 }
 
+.links li a {
+  transition-property: color;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.links li a:is(:focus, :hover) {
+  color: var(--colour-strong-cyan-500);
+}
+
 @media (min-width: 768px) {
   .links {
     /* grid-template-columns: repeat(3, 1fr); */
