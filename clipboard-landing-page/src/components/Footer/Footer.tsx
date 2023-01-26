@@ -25,13 +25,13 @@ const Footer = () => {
       </ul>
       <ul className={styles.socialLinks}>
         <li>
-          <IconButton name="facebook" href="https://www.facebook.com/" />
+          <IconButton name="facebook" href="#" />
         </li>
         <li>
-          <IconButton name="twitter" href="https://www.twitter.com/" />
+          <IconButton name="twitter" href="#" />
         </li>
         <li>
-          <IconButton name="instagram" href="https://www.instagram.com/" />
+          <IconButton name="instagram" href="#" />
         </li>
       </ul>
     </footer>
