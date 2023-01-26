@@ -10,6 +10,12 @@
 @media (min-width: 768px) {
   .container {
     background-image: url("/images/bg-header-desktop.png");
+    padding: 0 108px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
     padding: 0 165px;
   }
 }
