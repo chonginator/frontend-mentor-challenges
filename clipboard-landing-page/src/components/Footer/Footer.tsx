@@ -1,11 +1,12 @@
 import Logo from "../Logo";
 import IconButton from "../IconButton";
+import styles from "./Footer.module.css";
 
 const Footer = () => {
   return (
-    <footer>
+    <footer className={styles.container}>
       <Logo size="small" />
-      <ul>
+      <ul className={styles.links}>
         <li>
           <a>FAQs</a>
         </li>
@@ -22,7 +23,7 @@ const Footer = () => {
           <a>Install Guide</a>
         </li>
       </ul>
-      <ul>
+      <ul className={styles.socialLinks}>
         <li>
           <IconButton name="facebook" href="https://www.facebook.com/" />
         </li>

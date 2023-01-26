@@ -10,7 +10,7 @@ import Footer from "../../components/Footer";
 
 const HomePage = () => {
   return (
-    <>
+    <div>
       <main className={styles.container}>
         <Hero />
         <FeatureSection data={featureSectionSnippetsData} />
@@ -29,7 +29,7 @@ const HomePage = () => {
       </main>
 
       <Footer />
-    </>
+    </div>
   );
 };
 
