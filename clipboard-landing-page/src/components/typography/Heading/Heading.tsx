@@ -6,10 +6,14 @@ export interface HeadingProps {
   children: string;
 }
 
-const Heading = ({ level, children }: HeadingProps) => {
+const Heading = ({
+  level,
+  children,
+  ...rest
+}: HeadingProps & React.HTMLProps<HTMLHeadingElement>) => {
   const HeadingTag: ElementType = `h${level}`;
   return (
-    <HeadingTag className={`${styles.heading} ${styles[HeadingTag]}`}>
+    <HeadingTag className={`${styles.heading} ${styles[HeadingTag]}`} {...rest}>
       {children}
     </HeadingTag>
   );
