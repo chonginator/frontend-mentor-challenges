@@ -6,7 +6,17 @@ import { FeatureSectionProps } from "./FeatureSectionProps";
 function FeatureSection(props: FeatureSectionProps) {
   const { title, subtitle, image, features } = props.data;
 
-  const FeatureSectionBody = () => {
+  return (
+    <section className={styles.container}>
+      <div className={styles.titleContainer}>
+        <h2>{title}</h2>
+        <p className={styles.subtitle}>{subtitle}</p>
+      </div>
+      <FeatureSectionBody />
+    </section>
+  );
+
+  function FeatureSectionBody() {
     return image && features ? (
       <div className={styles.featureSectionBody}>
         <div className={styles.fullBleedLayout}>
@@ -25,17 +35,7 @@ function FeatureSection(props: FeatureSectionProps) {
         </div>
       </div>
     );
-  };
-
-  return (
-    <section className={styles.container}>
-      <div className={styles.titleContainer}>
-        <h2>{title}</h2>
-        <p className={styles.subtitle}>{subtitle}</p>
-      </div>
-      <FeatureSectionBody />
-    </section>
-  );
+  }
 
   function FeatureImage() {
     return (
