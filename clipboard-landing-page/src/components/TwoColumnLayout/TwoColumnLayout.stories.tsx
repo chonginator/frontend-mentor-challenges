@@ -1,7 +1,7 @@
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 import TwoColumnLayout from "./TwoColumnLayout";
 import Icon from "../Icon";
-import { Feature } from "../FeatureSection/FeatureSection";
+import { Feature } from "../FeatureSection/FeatureSectionProps";
 import featureSectionSnippetsData from "../FeatureSection/featureSectionSnippetsData";
 import styles from "../FeatureSection/FeatureSection.module.css";
 
