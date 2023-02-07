@@ -6,12 +6,6 @@ import { FeatureSectionProps } from "./FeatureSectionProps";
 function FeatureSection(props: FeatureSectionProps) {
   const { title, subtitle, image, features } = props.data;
 
-  function FeatureImage() {
-    return (
-      <img className={styles.featureImage} src={image?.src} alt={image?.alt} />
-    );
-  }
-
   const Features = () => (
     <div className={styles.featureContainer}>
       {features?.map((feature, index) => (
@@ -60,6 +54,12 @@ function FeatureSection(props: FeatureSectionProps) {
       <FeatureSectionBody />
     </section>
   );
+
+  function FeatureImage() {
+    return (
+      <img className={styles.featureImage} src={image?.src} alt={image?.alt} />
+    );
+  }
 }
 
 export default FeatureSection;
