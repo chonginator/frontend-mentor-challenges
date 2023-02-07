@@ -1,35 +1,16 @@
 import Icon from "../Icon";
 import TwoColumnLayout from "../TwoColumnLayout";
 import styles from "./FeatureSection.module.css";
-
-interface FeatureSectionProps {
-  data: FeatureSectionData;
-}
-
-type FeatureSectionData = {
-  title: string;
-  subtitle: string;
-  image?: Image;
-  features?: Feature[];
-};
-
-type Image = {
-  src: string;
-  alt: string;
-};
-
-export type Feature = {
-  title: string;
-  description: string;
-  iconName?: string;
-};
+import { FeatureSectionProps } from "./FeatureSectionProps";
 
 function FeatureSection(props: FeatureSectionProps) {
   const { title, subtitle, image, features } = props.data;
 
-  const FeatureImage = () => (
-    <img className={styles.featureImage} src={image?.src} alt={image?.alt} />
-  );
+  function FeatureImage() {
+    return (
+      <img className={styles.featureImage} src={image?.src} alt={image?.alt} />
+    );
+  }
 
   const Features = () => (
     <div className={styles.featureContainer}>
