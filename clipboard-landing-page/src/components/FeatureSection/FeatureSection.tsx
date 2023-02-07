@@ -6,24 +6,6 @@ import { FeatureSectionProps } from "./FeatureSectionProps";
 function FeatureSection(props: FeatureSectionProps) {
   const { title, subtitle, image, features } = props.data;
 
-  const Features = () => (
-    <div className={styles.featureContainer}>
-      {features?.map((feature, index) => (
-        <div key={index} className={styles.feature}>
-          {feature.iconName && (
-            <Icon
-              className={styles.featureIcon}
-              name={feature.iconName}
-              size={36}
-            />
-          )}
-          <h3 className={styles.featureTitle}>{feature.title}</h3>
-          <p className={styles.featureDescription}>{feature.description}</p>
-        </div>
-      ))}
-    </div>
-  );
-
   const FeatureSectionBody = () => {
     return image && features ? (
       <div className={styles.featureSectionBody}>
@@ -58,6 +40,26 @@ function FeatureSection(props: FeatureSectionProps) {
   function FeatureImage() {
     return (
       <img className={styles.featureImage} src={image?.src} alt={image?.alt} />
+    );
+  }
+
+  function Features() {
+    return (
+      <div className={styles.featureContainer}>
+        {features?.map((feature, index) => (
+          <div key={index} className={styles.feature}>
+            {feature.iconName && (
+              <Icon
+                className={styles.featureIcon}
+                name={feature.iconName}
+                size={36}
+              />
+            )}
+            <h3 className={styles.featureTitle}>{feature.title}</h3>
+            <p className={styles.featureDescription}>{feature.description}</p>
+          </div>
+        ))}
+      </div>
     );
   }
 }
