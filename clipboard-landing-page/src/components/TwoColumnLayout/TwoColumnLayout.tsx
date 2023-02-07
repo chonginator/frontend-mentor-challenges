@@ -1,10 +1,5 @@
 import styles from "./TwoColumnLayout.module.css";
-
-interface TwoColumnLayoutProps {
-  className?: string;
-  left: React.ReactNode;
-  right: React.ReactNode;
-}
+import { TwoColumnLayoutProps } from "./TwoColumnLayoutProps";
 
 const TwoColumnLayout = ({ className, left, right }: TwoColumnLayoutProps) => {
   return (

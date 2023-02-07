@@ -1,10 +1,8 @@
+import { LogoProps } from "./LogoProps";
 import LogoImage from "/images/logo.svg";
 
-interface LogoProps {
-  size?: "small" | "large";
-}
-
-const Logo = ({ size = "large" }: LogoProps) => {
+const Logo = (props: LogoProps) => {
+  const { size = "large" } = props;
   const radius = size === "large" ? 125 : 55;
 
   return (
