@@ -2,6 +2,9 @@
 module.exports = {
   content: ["./src/**/*.html"],
   theme: {
+    fontSize: {
+      base: "15px",
+    },
     extend: {
       fontFamily: {
         body: ["Alata", "sans-serif"],
