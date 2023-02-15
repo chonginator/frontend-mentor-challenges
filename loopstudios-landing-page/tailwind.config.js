@@ -2,7 +2,12 @@
 module.exports = {
   content: ["./src/**/*.html"],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        body: ["Alata", "sans-serif"],
+        heading: ["Josefin Sans", "sans-serif"],
+      },
+    },
   },
   plugins: [],
 };
