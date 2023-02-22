@@ -145,7 +145,7 @@
       </div>
     </header>
 
-    <main>
+    <main class="grid gap-24">
       <section
         class="flex min-h-[650px] flex-col justify-center bg-black/40 bg-hero-image-mobile bg-cover bg-no-repeat px-6 bg-blend-darken md:bg-hero-image-desktop md:bg-center lg:px-[164px]"
       >
@@ -156,14 +156,22 @@
         </h1>
       </section>
 
-      <section>
+      <section
+        class="relative flex flex-col px-6 text-center lg:flex-row lg:items-end lg:px-[164px]"
+      >
         <img
           src="./assets/images/desktop/image-interactive.jpg"
           alt="Man using a VR headset"
         />
-        <h2>The leader in interactive VR</h2>
-        <div>
-          <p>
+        <div
+          class="top-0 mx-auto flex max-w-[17rem] flex-col gap-4 bg-white text-center sm:max-w-none lg:absolute lg:right-[164px] lg:bottom-0 lg:top-[37%] lg:max-w-[541px] lg:pt-[6.67%] lg:pl-[6.67%] lg:text-left"
+        >
+          <h2
+            class="mt-12 font-heading text-3xl font-light uppercase lg:mt-0 lg:text-5xl"
+          >
+            The leader in interactive VR
+          </h2>
+          <p class="font-body text-base opacity-50">
             Founded in 2011, Loopstudios has been producing world-class virtual
             reality projects for some of the best companies around the globe.
             Our award-winning creations have transformed businesses through

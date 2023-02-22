@@ -17,7 +17,8 @@ module.exports = {
         heading: ["Josefin Sans", "sans-serif"],
       },
       fontSize: {
-        base: "15px",
+        base: ["15px", "25px"],
+        "3xl": ["2rem", "2rem"],
       },
     },
   },
