@@ -26,7 +26,7 @@
   </head>
   <body>
     <header
-      class="absolute isolate mt-16 w-full px-6 font-body text-white lg:px-[164px]"
+      class="absolute isolate z-10 mt-16 w-full px-6 font-body text-white lg:px-[164px]"
     >
       <nav
         id="mobile-menu"
@@ -73,7 +73,7 @@
         </ul>
       </nav>
       <div class="flex items-center justify-between">
-        <div class="isolate z-10 flex w-full items-center justify-between">
+        <div class="isolate flex w-full items-center justify-between">
           <a href="#">
             <img src="./assets/images/logo.svg" alt="Loopstudios logo" />
           </a>
@@ -145,9 +145,9 @@
       </div>
     </header>
 
-    <main class="grid gap-24">
+    <main class="isolate grid gap-24">
       <section
-        class="flex min-h-[650px] flex-col justify-center bg-black/40 bg-hero-image-mobile bg-cover bg-no-repeat px-6 bg-blend-darken md:bg-hero-image-desktop md:bg-center lg:px-[164px]"
+        class="flex min-h-[650px] flex-col justify-center bg-black/40 bg-hero-mobile bg-cover bg-no-repeat px-6 bg-blend-darken md:bg-hero-desktop md:bg-center lg:px-[164px]"
       >
         <h1
           class="border-2 border-white px-6 pt-6 pb-3 font-heading text-[40px] font-light uppercase leading-[38px] text-white sm:px-9 sm:pt-10 sm:pb-6 sm:text-6xl md:max-w-[40rem]"
@@ -164,7 +164,7 @@
           alt="Man using a VR headset"
         />
         <div
-          class="top-0 mx-auto flex max-w-[17rem] flex-col gap-4 bg-white text-center sm:max-w-none lg:absolute lg:right-[164px] lg:bottom-0 lg:top-[37%] lg:max-w-[541px] lg:pt-[6.67%] lg:pl-[6.67%] lg:text-left"
+          class="mx-auto flex max-w-[17rem] flex-col gap-4 bg-white text-center sm:max-w-none lg:absolute lg:right-[164px] lg:-bottom-[1px] lg:top-[37%] lg:max-w-[541px] lg:pt-[6.67%] lg:pl-[6.67%] lg:text-left"
         >
           <h2
             class="mt-12 font-heading text-3xl font-light uppercase lg:mt-0 lg:text-5xl"
@@ -180,19 +180,91 @@
         </div>
       </section>
 
-      <section>
-        <h2>Our creations</h2>
-        <div>
-          <div>Deep earth</div>
-          <div>Night arcade</div>
-          <div>Soccer team VR</div>
-          <div>The grid</div>
-          <div>From up above VR</div>
-          <div>Pocket borealis</div>
-          <div>The curiosity</div>
-          <div>Make it fisheye</div>
+      <section
+        class="relative flex flex-col px-6 text-center lg:px-[164px] lg:text-left"
+      >
+        <h2 class="font-heading text-3xl font-light uppercase lg:text-5xl">
+          Our creations
+        </h2>
+        <button
+          class="order-last mt-8 self-center border border-black py-3.5 px-9 font-body text-sm uppercase tracking-[0.35em] transition-colors hover:bg-black hover:text-white lg:absolute lg:top-0 lg:right-0 lg:mr-[164px] lg:mt-0"
+        >
+          See all
+        </button>
+        <div class="mt-12 grid gap-6 lg:mt-20 lg:grid-cols-4 lg:gap-[30px]">
+          <div
+            class="group relative flex min-h-[120px] cursor-pointer items-end bg-project-deep-earth-mobile bg-cover bg-no-repeat p-5 bg-blend-overlay mix-blend-overlay transition-colors before:absolute before:inset-0 before:bg-project-gradient-overlay-mobile before:bg-cover before:bg-no-repeat hover:bg-white/75 hover:before:bg-none lg:min-h-[450px] lg:bg-project-deep-earth-desktop lg:px-9 lg:py-7 lg:before:bg-project-gradient-overlay-desktop"
+          >
+            <h3
+              class="isolate text-left font-heading text-2xl font-light uppercase text-white group-hover:text-black lg:text-3xl"
+            >
+              Deep <span class="block">earth</span>
+            </h3>
+          </div>
+          <div
+            class="group relative flex min-h-[120px] cursor-pointer items-end bg-project-night-arcade-mobile bg-cover bg-no-repeat p-5 bg-blend-overlay mix-blend-overlay transition-colors before:absolute before:inset-0 before:bg-project-gradient-overlay-mobile before:bg-cover before:bg-no-repeat hover:bg-white/75 hover:before:bg-none lg:min-h-[450px] lg:bg-project-night-arcade-desktop lg:px-9 lg:py-7 lg:before:bg-project-gradient-overlay-desktop"
+          >
+            <h3
+              class="isolate text-left font-heading text-2xl font-light uppercase text-white group-hover:text-black lg:text-3xl"
+            >
+              Night <span class="block">arcade</span>
+            </h3>
+          </div>
+          <div
+            class="group relative flex min-h-[120px] cursor-pointer items-end bg-project-soccer-team-mobile bg-cover bg-no-repeat p-5 bg-blend-overlay mix-blend-overlay transition-colors before:absolute before:inset-0 before:bg-project-gradient-overlay-mobile before:bg-cover before:bg-no-repeat hover:bg-white/75 hover:before:bg-none lg:min-h-[450px] lg:bg-project-soccer-team-desktop lg:px-9 lg:py-7 lg:before:bg-project-gradient-overlay-desktop"
+          >
+            <h3
+              class="isolate text-left font-heading text-2xl font-light uppercase text-white group-hover:text-black lg:text-3xl"
+            >
+              Soccer <span class="block">team VR</span>
+            </h3>
+          </div>
+          <div
+            class="group relative flex min-h-[120px] cursor-pointer items-end bg-project-grid-mobile bg-cover bg-no-repeat p-5 bg-blend-overlay mix-blend-overlay transition-colors before:absolute before:inset-0 before:bg-project-gradient-overlay-mobile before:bg-cover before:bg-no-repeat hover:bg-white/75 hover:before:bg-none lg:min-h-[450px] lg:bg-project-grid-desktop lg:px-9 lg:py-7 lg:before:bg-project-gradient-overlay-desktop"
+          >
+            <h3
+              class="isolate text-left font-heading text-2xl font-light uppercase text-white group-hover:text-black lg:text-3xl"
+            >
+              The <span class="block">grid</span>
+            </h3>
+          </div>
+          <div
+            class="group relative flex min-h-[120px] cursor-pointer items-end bg-project-from-above-mobile bg-cover bg-no-repeat p-5 bg-blend-overlay mix-blend-overlay transition-colors before:absolute before:inset-0 before:bg-project-gradient-overlay-mobile before:bg-cover before:bg-no-repeat hover:bg-white/75 hover:before:bg-none lg:min-h-[450px] lg:bg-project-from-above-desktop lg:px-9 lg:py-7 lg:before:bg-project-gradient-overlay-desktop"
+          >
+            <h3
+              class="isolate text-left font-heading text-2xl font-light uppercase text-white group-hover:text-black lg:text-3xl"
+            >
+              From up <span class="block">above VR</span>
+            </h3>
+          </div>
+          <div
+            class="group relative flex min-h-[120px] cursor-pointer items-end bg-project-pocket-borealis-mobile bg-cover bg-no-repeat p-5 bg-blend-overlay mix-blend-overlay transition-colors before:absolute before:inset-0 before:bg-project-gradient-overlay-mobile before:bg-cover before:bg-no-repeat hover:bg-white/75 hover:before:bg-none lg:min-h-[450px] lg:bg-project-pocket-borealis-desktop lg:px-9 lg:py-7 lg:before:bg-project-gradient-overlay-desktop"
+          >
+            <h3
+              class="isolate text-left font-heading text-2xl font-light uppercase text-white group-hover:text-black lg:text-3xl"
+            >
+              Pocket <span class="block">borealis</span>
+            </h3>
+          </div>
+          <div
+            class="group relative flex min-h-[120px] cursor-pointer items-end bg-project-curiosity-mobile bg-cover bg-no-repeat p-5 bg-blend-overlay mix-blend-overlay transition-colors before:absolute before:inset-0 before:bg-project-gradient-overlay-mobile before:bg-cover before:bg-no-repeat hover:bg-white/75 hover:before:bg-none lg:min-h-[450px] lg:bg-project-curiosity-desktop lg:px-9 lg:py-7 lg:before:bg-project-gradient-overlay-desktop"
+          >
+            <h3
+              class="isolate text-left font-heading text-2xl font-light uppercase text-white group-hover:text-black lg:text-3xl"
+            >
+              The <span class="block">curiosity</span>
+            </h3>
+          </div>
+          <div
+            class="group relative flex min-h-[120px] cursor-pointer items-end bg-project-fisheye-mobile bg-cover bg-no-repeat p-5 bg-blend-overlay mix-blend-overlay transition-colors before:absolute before:inset-0 before:bg-project-gradient-overlay-mobile before:bg-cover before:bg-no-repeat hover:bg-white/75 hover:before:bg-none lg:min-h-[450px] lg:bg-project-fisheye-desktop lg:px-9 lg:py-7 lg:before:bg-project-gradient-overlay-desktop"
+          >
+            <h3
+              class="isolate text-left font-heading text-2xl font-light uppercase text-white group-hover:text-black lg:text-3xl"
+            >
+              Make it <span class="block">fisheye</span>
+            </h3>
+          </div>
         </div>
-        <button>See all</button>
       </section>
     </main>
     <footer>
