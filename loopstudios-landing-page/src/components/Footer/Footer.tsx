@@ -1,3 +1,10 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
+import Logo from "../../assets/logo.svg";
+import FacebookIcon from "../../assets/icon-facebook.svg";
+import TwitterIcon from "../../assets/icon-twitter.svg";
+import PinterestIcon from "../../assets/icon-pinterest.svg";
+import InstagramIcon from "../../assets/icon-instagram.svg";
+
 function Footer() {
   return (
     <footer className="mt-24 bg-black px-6 py-14 text-center text-white md:py-11">
@@ -5,7 +12,7 @@ function Footer() {
         <div className="flex flex-col justify-between md:flex-row">
           <div className="flex flex-col items-center gap-6 md:items-start">
             <a href="#">
-              <img src="./assets/images/logo.svg" alt="Loopstudios logo" />
+              <img src={Logo} alt="Loopstudios logo" />
             </a>
             <ul className="flex flex-col gap-4 font-body text-base md:flex-row md:gap-8">
               <li className="group">
@@ -57,10 +64,7 @@ function Footer() {
                   className="after:mt-2 after:block after:h-[2px] after:w-full after:bg-white after:opacity-0 after:transition-opacity group-hover:after:opacity-100"
                   href="#"
                 >
-                  <img
-                    src="./assets/images/icon-facebook.svg"
-                    alt="Facebook logo"
-                  />
+                  <img src={FacebookIcon} alt="Facebook logo" />
                 </a>
               </li>
               <li className="group flex">
@@ -68,10 +72,7 @@ function Footer() {
                   className="after:mt-[12.5px] after:block after:h-[2px] after:w-full after:bg-white after:opacity-0 after:transition-opacity group-hover:after:opacity-100"
                   href="#"
                 >
-                  <img
-                    src="./assets/images/icon-twitter.svg"
-                    alt="Twitter logo"
-                  />
+                  <img src={TwitterIcon} alt="Twitter logo" />
                 </a>
               </li>
               <li className="group flex">
@@ -79,10 +80,7 @@ function Footer() {
                   className="after:mt-2 after:block after:h-[2px] after:w-full after:bg-white after:opacity-0 after:transition-opacity group-hover:after:opacity-100"
                   href="#"
                 >
-                  <img
-                    src="./assets/images/icon-pinterest.svg"
-                    alt="Pinterest logo"
-                  />
+                  <img src={PinterestIcon} alt="Pinterest logo" />
                 </a>
               </li>
               <li className="group flex">
@@ -90,10 +88,7 @@ function Footer() {
                   className="after:mt-2 after:block after:h-[2px] after:w-full after:bg-white after:opacity-0 after:transition-opacity group-hover:after:opacity-100"
                   href="#"
                 >
-                  <img
-                    src="./assets/images/icon-instagram.svg"
-                    alt="Instagram logo"
-                  />
+                  <img src={InstagramIcon} alt="Instagram logo" />
                 </a>
               </li>
             </ul>
