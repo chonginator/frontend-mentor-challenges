@@ -1,10 +1,11 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import logo from "../../assets/logo.svg";
+import MaxWidthWrapper from "../MaxWidthWrapper";
 
 function Header() {
   return (
     <header className="absolute isolate z-10 mt-16 w-full px-6 font-body text-white">
-      <div className="mx-auto max-w-[1111px]">
+      <MaxWidthWrapper>
         <nav
           id="mobile-menu"
           className="fixed top-0 left-0 hidden h-full w-full bg-black"
@@ -128,7 +129,7 @@ function Header() {
             </ul>
           </nav>
         </div>
-      </div>
+      </MaxWidthWrapper>
     </header>
   );
 }

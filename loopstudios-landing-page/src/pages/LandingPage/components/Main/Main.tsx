@@ -1,20 +1,21 @@
 import interactiveVRImage from "../../../../assets/image-interactive.jpg";
+import MaxWidthWrapper from "../../../../components/MaxWidthWrapper";
 
 function Main() {
   return (
     <main className="isolate grid gap-24">
       <section className="min-h-[650px] bg-black/40 bg-hero-mobile bg-cover bg-no-repeat px-6 bg-blend-darken md:bg-hero-desktop md:bg-center">
-        <div className="mx-auto h-full max-w-[1111px]">
+        <MaxWidthWrapper>
           <div className="flex h-full flex-col justify-center">
             <h1 className="border-2 border-white px-6 pt-6 pb-3 font-heading text-[40px] font-light uppercase leading-[38px] text-white sm:px-9 sm:pt-10 sm:pb-6 sm:text-6xl md:max-w-[40rem]">
               Immersive experiences that deliver
             </h1>
           </div>
-        </div>
+        </MaxWidthWrapper>
       </section>
 
       <section className="relative px-6 text-center">
-        <div className="mx-auto max-w-[1111px]">
+        <MaxWidthWrapper>
           <div className="flex flex-col lg:flex-row lg:items-end">
             <img src={interactiveVRImage} alt="Man using a VR headset" />
             <div className="mx-auto flex max-w-[17rem] flex-col gap-4 bg-white text-center sm:max-w-none lg:absolute lg:right-[164px] lg:-bottom-[1px] lg:top-[37%] lg:max-w-[34.375rem] lg:pt-[6.67%] lg:pl-[6.67%] lg:text-left">
@@ -29,11 +30,11 @@ function Main() {
               </p>
             </div>
           </div>
-        </div>
+        </MaxWidthWrapper>
       </section>
 
       <section className="px-6 text-center lg:text-left">
-        <div className="mx-auto max-w-[1111px]">
+        <MaxWidthWrapper>
           <div className="relative flex flex-col">
             <h2 className="font-heading text-3xl font-light uppercase lg:text-5xl">
               Our creations
@@ -84,7 +85,7 @@ function Main() {
               </div>
             </div>
           </div>
-        </div>
+        </MaxWidthWrapper>
       </section>
     </main>
   );

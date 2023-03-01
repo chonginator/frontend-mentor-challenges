@@ -4,11 +4,12 @@ import facebookIcon from "../../assets/icon-facebook.svg";
 import twitterIcon from "../../assets/icon-twitter.svg";
 import pinterestIcon from "../../assets/icon-pinterest.svg";
 import instagramIcon from "../../assets/icon-instagram.svg";
+import MaxWidthWrapper from "../MaxWidthWrapper";
 
 function Footer() {
   return (
     <footer className="mt-24 bg-black px-6 py-14 text-center text-white md:py-11">
-      <div className="mx-auto max-w-[1111px]">
+      <MaxWidthWrapper>
         <div className="flex flex-col justify-between md:flex-row">
           <div className="flex flex-col items-center gap-6 md:items-start">
             <a href="#">
@@ -97,7 +98,7 @@ function Footer() {
             </small>
           </div>
         </div>
-      </div>
+      </MaxWidthWrapper>
     </footer>
   );
 }
