@@ -4,12 +4,12 @@ import logo from "../src/assets/logo.svg";
 
 const theme = create({
   base: "light",
+  textColor: "hsl(0, 0%, 41%)",
 
-  textColor: "white",
   // UI
   appBg: "black",
   appBorderColor: "hsl(0, 0%, 41%)",
-  appContentBg: "white",
+  appContentBg: "black",
 
   // Toolbar
   barBg: "black",
