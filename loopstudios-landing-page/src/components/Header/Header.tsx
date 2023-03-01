@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import Logo from "../../assets/logo.svg";
+import logo from "../../assets/logo.svg";
 
 function Header() {
   return (
@@ -55,7 +55,7 @@ function Header() {
         <div className="flex items-center justify-between">
           <div className="isolate flex w-full items-center justify-between">
             <a href="#">
-              <img src={Logo} alt="Loopstudios logo" />
+              <img src={logo} alt="Loopstudios logo" />
             </a>
             <button id="menu" className="flex h-5 w-7 justify-center md:hidden">
               <svg
