@@ -8,7 +8,7 @@ function Nav() {
       <a className="isolate z-10" href="#">
         <img src={logo} alt="Loopstudios logo" />
       </a>
-      <nav className="hidden border border-blue-500 md:block">
+      <nav className="hidden md:block">
         <ul className="flex gap-8">
           <li className="group flex cursor-pointer items-center">
             <a
