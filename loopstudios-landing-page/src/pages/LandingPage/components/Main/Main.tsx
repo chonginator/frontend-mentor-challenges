@@ -17,7 +17,7 @@ function Main() {
         <div className="mx-auto max-w-[1111px]">
           <div className="flex flex-col lg:flex-row lg:items-end">
             <img src={interactiveVRImage} alt="Man using a VR headset" />
-            <div className="mx-auto flex max-w-[17rem] flex-col gap-4 bg-white text-center sm:max-w-none lg:absolute lg:right-[164px] lg:-bottom-[1px] lg:top-[37%] lg:max-w-[541px] lg:pt-[6.67%] lg:pl-[6.67%] lg:text-left">
+            <div className="mx-auto flex max-w-[17rem] flex-col gap-4 bg-white text-center sm:max-w-none lg:absolute lg:right-[164px] lg:-bottom-[1px] lg:top-[37%] lg:max-w-[34.375rem] lg:pt-[6.67%] lg:pl-[6.67%] lg:text-left">
               <h2 className="mt-12 font-heading text-3xl font-light uppercase lg:mt-0 lg:text-5xl">
                 The leader in interactive VR
               </h2>
