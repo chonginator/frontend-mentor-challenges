@@ -24,22 +24,5 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/index.tsx"></script>
-    <script>
-      window.addEventListener("load", () => {
-        const root = document.getElementById("root");
-        root.getElementBy;
-        const menu = document.getElementById("menu");
-        const mobileMenu = document.getElementById("mobile-menu");
-        const openSvg = document.getElementById("close");
-        const closeSvg = document.getElementById("open");
-
-        menu.addEventListener("click", () => {
-          mobileMenu.classList.toggle("hidden");
-          openSvg.classList.toggle("hidden");
-          closeSvg.classList.toggle("hidden");
-          document.body.classList.toggle("overflow-hidden");
-        });
-      });
-    </script>
   </body>
 </html>
