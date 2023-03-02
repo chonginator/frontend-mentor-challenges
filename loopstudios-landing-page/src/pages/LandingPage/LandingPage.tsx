@@ -4,11 +4,11 @@ import Footer from "../../components/Footer";
 
 function LandingPage() {
   return (
-    <>
+    <div className="grid gap-24 bg-white md:gap-[184px]">
       <Header />
       <Main />
       <Footer />
-    </>
+    </div>
   );
 }
 

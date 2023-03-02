@@ -3,18 +3,18 @@ import MaxWidthWrapper from "../../../../components/MaxWidthWrapper";
 
 function Main() {
   return (
-    <main className="isolate grid gap-24">
+    <main className="isolate grid gap-24 md:gap-[184px]">
       <section className="min-h-[650px] bg-black/40 bg-hero-mobile bg-cover bg-no-repeat px-6 bg-blend-darken md:bg-hero-desktop md:bg-center">
         <MaxWidthWrapper>
           <div className="flex h-full flex-col justify-center">
-            <h1 className="border-2 border-white px-6 pt-6 pb-3 font-heading text-[40px] font-light uppercase leading-[38px] text-white sm:px-9 sm:pt-10 sm:pb-6 sm:text-6xl md:max-w-[40rem]">
+            <h1 className="border-2 border-white px-6 pt-6 pb-3 font-heading text-[40px] font-light uppercase leading-[38px] text-white sm:px-9 sm:pt-10 sm:pb-6 sm:text-6xl md:mt-20 md:max-w-[40rem] md:text-7xl">
               Immersive experiences that deliver
             </h1>
           </div>
         </MaxWidthWrapper>
       </section>
 
-      <section className="relative px-6 text-center">
+      <section className="relative px-6 text-center md:-mt-6">
         <MaxWidthWrapper>
           <div className="flex flex-col lg:flex-row lg:items-end">
             <img src={interactiveVRImage} alt="Man using a VR headset" />

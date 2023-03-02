@@ -8,7 +8,7 @@ import MaxWidthWrapper from "../MaxWidthWrapper";
 
 function Footer() {
   return (
-    <footer className="mt-24 bg-black px-6 py-14 text-center text-white md:py-11">
+    <footer className="bg-black px-6 py-14 text-center text-white md:py-11">
       <MaxWidthWrapper>
         <div className="flex flex-col justify-between md:flex-row">
           <div className="flex flex-col items-center gap-6 md:items-start">
