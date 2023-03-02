@@ -1,24 +1,16 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import { useState } from "react";
 import useLockBodyScroll from "../../../../hooks/useLockBodyScroll";
+import HamburgerMenu from "./HamburgerMenu";
 
 function MobileNav() {
-  const [isOpen, setIsOpen] = useState(false);
-
-  useLockBodyScroll(isOpen);
-
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-    document.body.classList.toggle("overflow-hidden");
-  };
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  useLockBodyScroll(isMenuOpen);
 
   return (
     <>
-      {isOpen && (
-        <nav
-          id="mobile-menu"
-          className="fixed top-0 left-0 h-full w-full bg-black"
-        >
+      {isMenuOpen && (
+        <nav className="fixed top-0 left-0 h-full w-full bg-black">
           <ul className="absolute inset-0 my-auto flex h-fit w-full flex-col gap-6 px-6">
             <li className="group w-fit cursor-pointer">
               <a
@@ -63,47 +55,12 @@ function MobileNav() {
           </ul>
         </nav>
       )}
-      <HamburgerMenuButton />
+      <HamburgerMenu
+        toggleMenu={() => setIsMenuOpen(!isMenuOpen)}
+        isMenuOpen={isMenuOpen}
+      />
     </>
   );
-
-  function HamburgerMenuButton() {
-    return (
-      <button
-        id="menu"
-        className="isolate flex h-5 w-7 justify-center md:hidden"
-        onClick={toggleMenu}
-      >
-        {!isOpen && (
-          <svg
-            id="open"
-            width="24"
-            height="16"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <g fill="#FFF" fillRule="evenodd">
-              <path d="M0 0h24v2H0zM0 7h24v2H0zM0 14h24v2H0z" />
-            </g>
-          </svg>
-        )}
-        {isOpen && (
-          <svg
-            id="close"
-            className="#hidden"
-            width="20"
-            height="20"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M17.778.808l1.414 1.414L11.414 10l7.778 7.778-1.414 1.414L10 11.414l-7.778 7.778-1.414-1.414L8.586 10 .808 2.222 2.222.808 10 8.586 17.778.808z"
-              fill="#FFF"
-              fillRule="evenodd"
-            />
-          </svg>
-        )}
-      </button>
-    );
-  }
 }
 
 export default MobileNav;
