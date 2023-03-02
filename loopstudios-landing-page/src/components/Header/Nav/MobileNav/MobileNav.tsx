@@ -1,16 +1,11 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import { useState, useEffect } from "react";
+import { useState } from "react";
+import useLockBodyScroll from "../../../../hooks/useLockBodyScroll";
 
 function MobileNav() {
   const [isOpen, setIsOpen] = useState(false);
 
-  useEffect(() => {
-    if (isOpen) {
-      document.body.classList.add("overflow-hidden");
-    } else {
-      document.body.classList.remove("overflow-hidden");
-    }
-  }, [isOpen]);
+  useLockBodyScroll(isOpen);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
