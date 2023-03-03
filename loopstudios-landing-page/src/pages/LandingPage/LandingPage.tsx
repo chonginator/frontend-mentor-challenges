@@ -4,12 +4,16 @@ import Footer from "../../components/Footer";
 
 function LandingPage() {
   return (
-    <div className="grid gap-24 bg-white md:gap-[184px]">
+    <Wrapper>
       <Header />
       <Main />
       <Footer />
-    </div>
+    </Wrapper>
   );
+}
+
+function Wrapper({ children }: { children: React.ReactNode }) {
+  return <div className="grid gap-24 bg-white md:gap-[184px]">{children}</div>;
 }
 
 export default LandingPage;
