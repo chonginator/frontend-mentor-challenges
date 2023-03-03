@@ -1,13 +1,11 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import logo from "../../../assets/logo.svg";
+import Logo from "../../Logo";
 import MobileNav from "./MobileNav";
 
 function Nav() {
   return (
-    <div className="flex items-center justify-between">
-      <a className="isolate z-10" href="#">
-        <img src={logo} alt="Loopstudios logo" />
-      </a>
+    <NavWrapper>
+      <Logo />
       <nav className="hidden md:block">
         <ul className="flex gap-8">
           <li className="group flex cursor-pointer items-center">
@@ -53,8 +51,12 @@ function Nav() {
         </ul>
       </nav>
       <MobileNav />
-    </div>
+    </NavWrapper>
   );
+
+  function NavWrapper({ children }: { children: React.ReactNode }) {
+    return <div className="flex items-center justify-between">{children}</div>;
+  }
 }
 
 export default Nav;

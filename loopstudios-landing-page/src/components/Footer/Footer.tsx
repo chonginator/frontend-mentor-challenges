@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import logo from "../../assets/logo.svg";
 import MaxWidthWrapper from "../MaxWidthWrapper";
+import Logo from "../Logo";
 import Icon from "../Icon";
 
 function Footer() {
@@ -9,9 +9,7 @@ function Footer() {
       <MaxWidthWrapper>
         <div className="flex flex-col justify-between md:flex-row">
           <div className="flex flex-col items-center gap-6 md:items-start">
-            <a href="#">
-              <img src={logo} alt="Loopstudios logo" />
-            </a>
+            <Logo />
             <ul className="flex flex-col gap-4 font-body text-base md:flex-row md:gap-8">
               <li className="group">
                 <a
