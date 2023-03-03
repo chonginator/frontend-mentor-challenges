@@ -1,18 +1,12 @@
 import Icons from "../../assets/icon-map.svg";
+import { IconProps } from "./IconProps";
 
-interface IconProps {
-  id:
-    | "cross"
-    | "hamburger"
-    | "facebook"
-    | "instagram"
-    | "pinterest"
-    | "twitter";
-}
+function Icon(props: IconProps) {
+  const defaultSize = { width: 24, height: 24 };
+  const { id, size: { width, height } = defaultSize } = props;
 
-function Icon({ id }: IconProps) {
   return (
-    <svg>
+    <svg width={width} height={height}>
       <use xlinkHref={`${Icons}#${id}`} />
     </svg>
   );

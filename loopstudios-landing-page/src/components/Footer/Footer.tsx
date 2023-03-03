@@ -1,10 +1,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import logo from "../../assets/logo.svg";
-import facebookIcon from "../../assets/icon-facebook.svg";
-import twitterIcon from "../../assets/icon-twitter.svg";
-import pinterestIcon from "../../assets/icon-pinterest.svg";
-import instagramIcon from "../../assets/icon-instagram.svg";
 import MaxWidthWrapper from "../MaxWidthWrapper";
+import Icon from "../Icon";
 
 function Footer() {
   return (
@@ -65,7 +62,7 @@ function Footer() {
                   className="after:mt-2 after:block after:h-[2px] after:w-full after:bg-white after:opacity-0 after:transition-opacity group-hover:after:opacity-100"
                   href="#"
                 >
-                  <img src={facebookIcon} alt="Facebook logo" />
+                  <Icon id="facebook" />
                 </a>
               </li>
               <li className="group flex">
@@ -73,7 +70,7 @@ function Footer() {
                   className="after:mt-[12.5px] after:block after:h-[2px] after:w-full after:bg-white after:opacity-0 after:transition-opacity group-hover:after:opacity-100"
                   href="#"
                 >
-                  <img src={twitterIcon} alt="Twitter logo" />
+                  <Icon id="twitter" />
                 </a>
               </li>
               <li className="group flex">
@@ -81,7 +78,7 @@ function Footer() {
                   className="after:mt-2 after:block after:h-[2px] after:w-full after:bg-white after:opacity-0 after:transition-opacity group-hover:after:opacity-100"
                   href="#"
                 >
-                  <img src={pinterestIcon} alt="Pinterest logo" />
+                  <Icon id="pinterest" />
                 </a>
               </li>
               <li className="group flex">
@@ -89,7 +86,7 @@ function Footer() {
                   className="after:mt-2 after:block after:h-[2px] after:w-full after:bg-white after:opacity-0 after:transition-opacity group-hover:after:opacity-100"
                   href="#"
                 >
-                  <img src={instagramIcon} alt="Instagram logo" />
+                  <Icon id="instagram" />
                 </a>
               </li>
             </ul>

@@ -7,10 +7,18 @@ function HamburgerMenu({ toggleMenu, isMenuOpen }: HamburgerMenuProps) {
       className="isolate flex h-5 w-7 justify-center md:hidden"
       onClick={toggleMenu}
     >
-      {!isMenuOpen && <Icon id="hamburger" />}
-      {isMenuOpen && <Icon id="cross" />}
+      {!isMenuOpen && <HamburgerIcon />}
+      {isMenuOpen && <CrossIcon />}
     </button>
   );
+}
+
+function HamburgerIcon() {
+  return <Icon id="hamburger" size={{ width: 24, height: 16 }} />;
+}
+
+function CrossIcon() {
+  return <Icon id="cross" size={{ width: 20, height: 20 }} />;
 }
 
 export default HamburgerMenu;
