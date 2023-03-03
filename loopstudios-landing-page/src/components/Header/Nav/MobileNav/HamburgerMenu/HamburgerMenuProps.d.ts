@@ -1,4 +1,4 @@
-export interface HamburgerMenuProps {
+export type HamburgerMenuProps = {
   toggleMenu: () => void;
   isMenuOpen: boolean;
-}
+};

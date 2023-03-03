@@ -6,7 +6,7 @@ function Icon(props: IconProps) {
   const { id, size: { width, height } = defaultSize } = props;
 
   return (
-    <svg width={width} height={height}>
+    <svg width={width} height={height} aria-hidden>
       <use xlinkHref={`${Icons}#${id}`} />
     </svg>
   );
