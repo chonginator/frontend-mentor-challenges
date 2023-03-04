@@ -3,7 +3,7 @@ import SectionWrapper from "../SectionWrapper";
 
 function About() {
   return (
-    <AboutWrapper>
+    <Wrapper>
       <img src={interactiveVRImage} alt="Man using a VR headset" />
       <div className="mx-auto flex max-w-[17rem] flex-col gap-4 bg-white text-center sm:max-w-none lg:absolute lg:right-[164px] lg:-bottom-[1px] lg:top-[37%] lg:max-w-[34.375rem] lg:pt-[6.67%] lg:pl-[6.67%] lg:text-left">
         <h2 className="mt-12 font-heading text-3xl font-light uppercase lg:mt-0 lg:text-5xl">
@@ -16,11 +16,11 @@ function About() {
           digital experiences that bind to their brand.
         </p>
       </div>
-    </AboutWrapper>
+    </Wrapper>
   );
 }
 
-function AboutWrapper({ children }: { children: React.ReactNode }) {
+function Wrapper({ children }: { children: React.ReactNode }) {
   return (
     <SectionWrapper className="relative text-center md:-mt-6">
       <div className="flex flex-col lg:flex-row lg:items-end">{children}</div>

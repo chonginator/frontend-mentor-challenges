@@ -4,15 +4,15 @@ import MobileNav from "./MobileNav";
 
 function Nav() {
   return (
-    <NavWrapper>
+    <Wrapper>
       <Logo />
       <NavLinks />
       <MobileNav />
-    </NavWrapper>
+    </Wrapper>
   );
 }
 
-function NavWrapper({ children }: { children: React.ReactNode }) {
+function Wrapper({ children }: { children: React.ReactNode }) {
   return <div className="flex items-center justify-between">{children}</div>;
 }
 
