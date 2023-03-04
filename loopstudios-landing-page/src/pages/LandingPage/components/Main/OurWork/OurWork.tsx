@@ -38,7 +38,7 @@ function Projects() {
 }
 
 function Project({ imageName, title }: { imageName: string; title: string }) {
-  const formattedTitle = title.split("\\n").map((line, index) => (
+  const titleWithLineBreaks = title.split("\\n").map((line, index) => (
     <span className="block" key={index}>
       {line}
     </span>
@@ -49,7 +49,7 @@ function Project({ imageName, title }: { imageName: string; title: string }) {
       className={`group relative flex min-h-[120px] cursor-pointer items-end bg-project-${imageName}-mobile bg-cover bg-no-repeat px-5 py-4 bg-blend-overlay mix-blend-overlay transition-colors before:absolute before:inset-0 before:bg-project-gradient-overlay-mobile before:bg-cover before:bg-no-repeat hover:bg-white/75 hover:before:bg-none md:min-h-[450px] md:bg-project-${imageName}-desktop lg:px-9 lg:py-7 lg:before:bg-project-gradient-overlay-desktop`}
     >
       <h3 className="isolate text-left font-heading text-2xl font-light uppercase text-white group-hover:text-black lg:text-3xl">
-        {formattedTitle}
+        {titleWithLineBreaks}
       </h3>
     </div>
   );
