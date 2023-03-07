@@ -13,7 +13,7 @@ function Hero() {
 function Wrapper({ children }: { children: React.ReactNode }) {
   return (
     <SectionWrapper className="min-h-[650px] bg-black/40 bg-hero-mobile bg-cover bg-no-repeat bg-blend-darken md:bg-hero-desktop md:bg-center">
-      <div className="flex h-full flex-col justify-center">{children}</div>;
+      <div className="flex h-full flex-col justify-center">{children}</div>
     </SectionWrapper>
   );
 }
