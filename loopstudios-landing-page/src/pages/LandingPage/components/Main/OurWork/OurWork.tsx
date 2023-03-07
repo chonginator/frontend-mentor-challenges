@@ -17,7 +17,7 @@ function OurWork() {
 
 function Wrapper({ children }: { children: React.ReactNode }) {
   return (
-    <SectionWrapper className="text-center lg:text-left">
+    <SectionWrapper className="isolate text-center lg:text-left">
       <div className="relative flex flex-col">{children}</div>
     </SectionWrapper>
   );
