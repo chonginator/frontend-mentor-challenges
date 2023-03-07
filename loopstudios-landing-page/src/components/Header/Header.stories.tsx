@@ -8,4 +8,4 @@ export default {
 
 const Template: ComponentStory<typeof Header> = () => <Header />;
 
-export const Default = Template.bind({});
+export const DefaultHeader = Template.bind({});
