@@ -5,8 +5,8 @@ function Project({ name, title }: ProjectProps) {
   const mobileBgClass = projectBackgroundClasses[name]["mobile"];
   const desktopBgClass = projectBackgroundClasses[name]["desktop"];
 
-  const titleWithLineBreaks = title.split("\\n").map((line) => (
-    <span className="block" key={crypto.randomUUID()}>
+  const titleWithLineBreaks = title.split("\\n").map((line, index) => (
+    <span className="block" key={index}>
       {line}
     </span>
   ));
