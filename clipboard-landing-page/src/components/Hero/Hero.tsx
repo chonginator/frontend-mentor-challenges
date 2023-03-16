@@ -1,12 +1,12 @@
 import Logo from "../Logo";
-import CTA from "../CTA";
+import { HeroCTA } from "../CTA";
 import styles from "./Hero.module.css";
 
 const Hero = () => {
   return (
     <section className={styles.container}>
       <Logo />
-      <CTA>
+      <HeroCTA>
         <div className={styles.titleContainer}>
           <h1 className={styles.title}>A history of everything you copy</h1>
           <p className={styles.subtitle}>
@@ -14,7 +14,7 @@ const Hero = () => {
             Instantly access your clipboard on all your devices.
           </p>
         </div>
-      </CTA>
+      </HeroCTA>
     </section>
   );
 };
