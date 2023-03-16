@@ -24,7 +24,7 @@
   filter: drop-shadow(0 10px 20px hsl(160, 64%, 72%, 50.33%));
 }
 
-.btn-primary:active {
+.btn-primary:hover {
   background-color: var(--colour-strong-cyan-300);
 }
 
@@ -34,6 +34,6 @@
   filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 9.88%));
 }
 
-.btn-secondary:active {
+.btn-secondary:hover {
   background-color: var(--colour-light-blue-300);
 }
