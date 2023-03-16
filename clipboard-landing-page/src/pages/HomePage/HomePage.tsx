@@ -5,8 +5,7 @@ import featureSectionSnippetsData from "../../components/FeatureSection/featureS
 import featureSectionAccessData from "../../components/FeatureSection/featureSectionAccessData";
 import featureSectionWorkflowData from "../../components/FeatureSection/featureSectionWorkflowData";
 import TestimonialBanner from "../../components/TestimonialBanner";
-import { FooterCTA } from "../../components/CTA/";
-import { titles } from "../../components/CTA/data/footer-cta-titles";
+import FooterCTA from "../../components/CTA/FooterCTA";
 import Footer from "../../components/Footer";
 
 const HomePage = () => {
@@ -18,7 +17,7 @@ const HomePage = () => {
         <FeatureSection data={featureSectionAccessData} />
         <FeatureSection data={featureSectionWorkflowData} />
         <TestimonialBanner />
-        <FooterCTA titles={titles} />
+        <FooterCTA />
       </main>
 
       <Footer />
