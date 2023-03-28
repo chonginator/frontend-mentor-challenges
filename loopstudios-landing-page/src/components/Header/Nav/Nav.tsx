@@ -1,13 +1,13 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import Logo from "../../Logo";
-import MobileNav from "./MobileNav";
+import HamburgerMenu from "./HamburgerMenu";
 
 function Nav() {
   return (
     <Wrapper>
       <Logo />
       <NavLinks />
-      <MobileNav />
+      <HamburgerMenu />
     </Wrapper>
   );
 }

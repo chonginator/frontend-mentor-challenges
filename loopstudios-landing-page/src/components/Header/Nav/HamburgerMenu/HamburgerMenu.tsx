@@ -1,26 +1,38 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import { useState } from "react";
-import useLockBodyScroll from "../../../../hooks/useLockBodyScroll";
-import HamburgerMenu from "./HamburgerMenu";
+import FocusLock from "react-focus-lock";
+import { RemoveScroll } from "react-remove-scroll";
+import HamburgerButton from "./HamburgerButton";
+import useEscapeKey from "../../../../hooks/useEscapeKey";
 
-function MobileNav() {
+function HamburgerMenu() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  useLockBodyScroll(isMenuOpen);
+
+  useEscapeKey(handleDismiss);
 
   return (
-    <>
-      {isMenuOpen && <MobileNavLinks />}
-      <HamburgerMenu
-        toggleMenu={() => setIsMenuOpen(!isMenuOpen)}
-        isMenuOpen={isMenuOpen}
-      />
-    </>
+    <nav className="md:hidden" role="navigation" aria-label="Mobile menu">
+      <FocusLock disabled={!isMenuOpen}>
+        <RemoveScroll enabled={isMenuOpen}>
+          {isMenuOpen && <MenuLinks />}
+          <HamburgerButton
+            isMenuOpen={isMenuOpen}
+            toggleIsMenuOpen={() => setIsMenuOpen(!isMenuOpen)}
+            aria-expanded={isMenuOpen}
+          />
+        </RemoveScroll>
+      </FocusLock>
+    </nav>
   );
+
+  function handleDismiss() {
+    setIsMenuOpen(false);
+  }
 }
 
-function MobileNavLinks() {
+function MenuLinks() {
   return (
-    <nav className="fixed top-0 left-0 h-full w-full bg-black">
+    <div className="fixed top-0 left-0 h-full w-full bg-black">
       <ul className="absolute inset-0 my-auto flex h-fit w-full flex-col gap-6 px-6">
         <li className="group w-fit cursor-pointer">
           <a
@@ -63,8 +75,8 @@ function MobileNavLinks() {
           </a>
         </li>
       </ul>
-    </nav>
+    </div>
   );
 }
 
-export default MobileNav;
+export default HamburgerMenu;
