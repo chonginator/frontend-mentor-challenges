@@ -1,7 +1,12 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import MaxWidthWrapper from "../MaxWidthWrapper";
 import Logo from "../Logo";
-import Icon from "../Icon";
+import {
+  FacebookIcon,
+  InstagramIcon,
+  PinterestIcon,
+  TwitterIcon,
+} from "../icons";
 
 function Footer() {
   return (
@@ -83,7 +88,7 @@ function SocialLinksAndCopyright() {
             className="after:mt-2 after:block after:h-[2px] after:w-full after:bg-white after:opacity-0 after:transition-opacity group-hover:after:opacity-100"
             href="#"
           >
-            <Icon id="facebook" />
+            <FacebookIcon />
           </a>
         </li>
         <li className="group flex">
@@ -91,7 +96,7 @@ function SocialLinksAndCopyright() {
             className="after:mt-[12.5px] after:block after:h-[2px] after:w-full after:bg-white after:opacity-0 after:transition-opacity group-hover:after:opacity-100"
             href="#"
           >
-            <Icon id="twitter" />
+            <TwitterIcon />
           </a>
         </li>
         <li className="group flex">
@@ -99,7 +104,7 @@ function SocialLinksAndCopyright() {
             className="after:mt-2 after:block after:h-[2px] after:w-full after:bg-white after:opacity-0 after:transition-opacity group-hover:after:opacity-100"
             href="#"
           >
-            <Icon id="pinterest" />
+            <PinterestIcon />
           </a>
         </li>
         <li className="group flex">
@@ -107,7 +112,7 @@ function SocialLinksAndCopyright() {
             className="after:mt-2 after:block after:h-[2px] after:w-full after:bg-white after:opacity-0 after:transition-opacity group-hover:after:opacity-100"
             href="#"
           >
-            <Icon id="instagram" />
+            <InstagramIcon />
           </a>
         </li>
       </ul>

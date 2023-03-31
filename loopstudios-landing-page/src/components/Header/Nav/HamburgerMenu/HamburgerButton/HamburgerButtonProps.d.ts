@@ -1,7 +1,4 @@
-import { ButtonHTMLAttributes } from "react";
-
-export type HamburgerButtonProps =
-  React.HTMLAttributes<ButtonHTMLAttributes> & {
-    toggleIsMenuOpen: () => void;
-    isMenuOpen: boolean;
-  };
+export type HamburgerButtonProps = React.HTMLAttributes<HTMLButtonElement> & {
+  toggleIsMenuOpen: () => void;
+  isMenuOpen: boolean;
+};

@@ -1,5 +1,5 @@
 import { HamburgerButtonProps } from "./HamburgerButtonProps";
-import Icon from "../../../../Icon";
+import { CloseIcon, HamburgerIcon } from "../../../../icons";
 
 function HamburgerButton({
   isMenuOpen,
@@ -10,7 +10,7 @@ function HamburgerButton({
     ? "Close mobile menu"
     : "Open mobile menu";
 
-  const icon = isMenuOpen ? <CrossIcon /> : <HamburgerIcon />;
+  const icon = isMenuOpen ? <CloseIcon /> : <HamburgerIcon />;
 
   return (
     <button
@@ -22,14 +22,6 @@ function HamburgerButton({
       {icon}
     </button>
   );
-}
-
-function HamburgerIcon() {
-  return <Icon id="hamburger" size={{ width: 24, height: 16 }} />;
-}
-
-function CrossIcon() {
-  return <Icon id="cross" size={{ width: 20, height: 20 }} />;
 }
 
 export default HamburgerButton;
