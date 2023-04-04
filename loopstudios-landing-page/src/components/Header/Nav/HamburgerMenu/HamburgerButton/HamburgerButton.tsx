@@ -1,5 +1,5 @@
 import { HamburgerButtonProps } from "./HamburgerButtonProps";
-import { CloseIcon, HamburgerIcon } from "../../../../icons";
+import { AnimatedHamburgerIcon } from "../../../../icons";
 
 function HamburgerButton({
   isMenuOpen,
@@ -10,16 +10,14 @@ function HamburgerButton({
     ? "Close mobile menu"
     : "Open mobile menu";
 
-  const icon = isMenuOpen ? <CloseIcon /> : <HamburgerIcon />;
-
   return (
     <button
-      className="isolate flex h-5 w-7 justify-center"
+      className="isolate flex h-7 w-7 justify-center"
       onClick={toggleIsMenuOpen}
       {...delegated}
     >
       <span className="sr-only">{visuallyHiddenText}</span>
-      {icon}
+      <AnimatedHamburgerIcon isMenuOpen={isMenuOpen} />
     </button>
   );
 }
