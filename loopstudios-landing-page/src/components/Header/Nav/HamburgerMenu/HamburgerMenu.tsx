@@ -1,14 +1,31 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import FocusLock from "react-focus-lock";
 import { RemoveScroll } from "react-remove-scroll";
+
+import resolveConfig from "tailwindcss/resolveConfig";
+import tailwindConfig from "../../../../../tailwind.config.js";
+
 import HamburgerButton from "./HamburgerButton";
 import useEscapeKey from "../../../../hooks/useEscapeKey";
+import useWindowSize from "../../../../hooks/useWindowSize";
+
+const fullConfig = resolveConfig(tailwindConfig);
 
 function HamburgerMenu() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEscapeKey(handleDismiss);
+  const windowSize = useWindowSize();
+
+  useEffect(() => {
+    if (
+      windowSize.width &&
+      windowSize.width >= parseInt(fullConfig.theme.screens.md)
+    ) {
+      handleDismiss();
+    }
+  }, [windowSize]);
 
   return (
     <nav className="md:hidden" role="navigation" aria-label="Mobile menu">
@@ -32,7 +49,7 @@ function HamburgerMenu() {
 
 function MenuLinks() {
   return (
-    <div className="fixed top-0 left-0 h-full w-full bg-black">
+    <div className="fixed left-0 top-0 h-full w-full bg-black">
       <ul className="absolute inset-0 my-auto flex h-fit w-full flex-col gap-6 px-6">
         <li className="group w-fit cursor-pointer">
           <a
