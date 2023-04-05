@@ -1,5 +1,4 @@
 import {
-  CloseIcon,
   AnimatedHamburgerIcon,
   FacebookIcon,
   InstagramIcon,

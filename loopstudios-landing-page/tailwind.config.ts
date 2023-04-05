@@ -1,5 +1,6 @@
-/** @type {import('tailwindcss').Config} */
-module.exports = {
+import type { Config } from "tailwindcss";
+
+export default {
   content: ["./**/*.{js,jsx,ts,tsx,html}"],
   theme: {
     extend: {
@@ -55,4 +56,4 @@ module.exports = {
     },
   },
   plugins: [],
-};
+} satisfies Config;
