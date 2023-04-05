@@ -10,7 +10,8 @@
     "format": "prettier \"src/**/*.{js,jsx,ts,tsx,html}\" --write",
     "lint": "eslint \"src/**/*.{js,jsx,ts,tsx}\" --quiet",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "chromatic": "npx chromatic --project-token=2dae9078db9d"
   },
   "keywords": [],
   "author": "",
@@ -51,5 +52,7 @@
     "react-dom": "^18.2.0",
     "react-focus-lock": "^2.9.4",
     "react-remove-scroll": "^2.5.5"
-  }
+  },
+  "readme": "ERROR: No README data found!",
+  "_id": "loopstudios-landing-page@1.0.0"
 }
