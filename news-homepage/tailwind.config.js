@@ -1,8 +1,30 @@
 /** @type {import('tailwindcss').Config} */
+const defaultTheme = require("tailwindcss/defaultTheme");
+
 module.exports = {
   content: ["./index.html"],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        white: "hsl(36, 100%, 99%)",
+        black: "hsl(240, 100%, 5%)",
+        gray: "hsl(236, 8%, 79%)",
+        darkGray: "hsl(237, 13%, 42%)",
+        orange: "hsl(5, 85%, 63%)",
+        yellow: "hsl(35%, 78%, 62%)"
+      },
+      fontFamily: {
+        sans: ["Inter", ...defaultTheme.fontFamily.sans]
+      },
+      fontSize: {
+        base: ["0.9375rem", "1.625rem"],
+        xs: ["1.125rem", "1.5rem"],
+        sm: ["1.25rem", "1.5rem"],
+        md: ["2rem", "2rem"],
+        lg: ["2.5rem", "2.5rem"],
+        xl: ["3.5rem", "3.5rem"]
+      },
+    },
   },
   plugins: [],
 }
