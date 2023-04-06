@@ -1,8 +1,11 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
+import Logo from "./components/Logo";
+
 function App() {
   return (
     <>
       <header>
-        <img src="/images/logo.svg" alt="Frontend Mentor News homepage logo" />
+        <Logo />
         <nav aria-label="Main menu">
           <ul>
             <li>Home</li>
@@ -14,7 +17,7 @@ function App() {
         </nav>
         <nav aria-label="Mobile menu">
           <button aria-expanded>
-            <div aria-hidden focusable="false">
+            <div aria-hidden>
               <span></span>
               <span></span>
               <span></span>
