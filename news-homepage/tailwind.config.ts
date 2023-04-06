@@ -1,8 +1,8 @@
-/** @type {import('tailwindcss').Config} */
-const defaultTheme = require("tailwindcss/defaultTheme");
+import type { Config } from "tailwindcss";
+import defaultTheme from "tailwindcss/defaultTheme";
 
-module.exports = {
-  content: ["./index.html"],
+export default {
+  content: ["./src/**/*.{js,jsx,ts,tsx}", "./index.html"],
   theme: {
     extend: {
       colors: {
@@ -11,10 +11,10 @@ module.exports = {
         gray: "hsl(236, 8%, 79%)",
         darkGray: "hsl(237, 13%, 42%)",
         orange: "hsl(5, 85%, 63%)",
-        yellow: "hsl(35%, 78%, 62%)"
+        yellow: "hsl(35%, 78%, 62%)",
       },
       fontFamily: {
-        sans: ["Inter", ...defaultTheme.fontFamily.sans]
+        sans: ["Inter", ...defaultTheme.fontFamily.sans],
       },
       fontSize: {
         base: ["0.9375rem", "1.625rem"],
@@ -22,10 +22,9 @@ module.exports = {
         sm: ["1.25rem", "1.5rem"],
         md: ["2rem", "2rem"],
         lg: ["2.5rem", "2.5rem"],
-        xl: ["3.5rem", "3.5rem"]
+        xl: ["3.5rem", "3.5rem"],
       },
     },
   },
   plugins: [],
-}
-
+} satisfies Config;
