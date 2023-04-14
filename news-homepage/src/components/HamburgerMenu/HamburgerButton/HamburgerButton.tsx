@@ -20,12 +20,7 @@ function HamburgerButton({
       aria-expanded={isOpen}
       {...props}
     >
-      <AnimatedHamburgerIcon
-        isOpen={isOpen}
-        width={width}
-        height={height}
-        stroke="red"
-      />
+      <AnimatedHamburgerIcon isOpen={isOpen} width={width} height={height} />
     </button>
   );
 }
