@@ -12,7 +12,6 @@ function HamburgerButton({
 
   return (
     <button
-      className="group"
       style={{
         width,
         height: Math.max(height, crossDimension), // Prevent layout shifting from dynamic width and just set the maximum of the two,
