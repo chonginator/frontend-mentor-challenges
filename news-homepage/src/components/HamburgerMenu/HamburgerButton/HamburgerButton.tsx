@@ -8,17 +8,18 @@ function HamburgerButton({
   ...props
 }: HamburgerButtonProps) {
   // Pythagorean theorem is used where the width of the bar is the hypotenuse when crossed
-  const crossDimension = 0.5 * Math.sqrt(2) * width;
+  const crossSize = 0.5 * Math.sqrt(2) * width;
 
   return (
     <button
       style={{
         width,
-        height: Math.max(height, crossDimension), // Prevent layout shifting from dynamic width and just set the maximum of the two,
+        height: Math.max(height, crossSize), // Set the maximum of the two to prevent layout shifting
       }}
       aria-expanded={isOpen}
       {...props}
     >
+      <span className="sr-only">{visuallyHiddenText}</span>
       <AnimatedHamburgerIcon isOpen={isOpen} width={width} height={height} />
     </button>
   );
