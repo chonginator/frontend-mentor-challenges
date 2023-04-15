@@ -15,16 +15,24 @@ const fullConfig = resolveConfig(tailwindConfig);
 function HamburgerMenu() {
   const [isOpen, setIsOpen] = useState(false);
   const windowSize = useWindowSize();
-  useEscapeKey(handleDismiss);
+  useEscapeKey(closeMenu);
 
   useEffect(() => {
     if (
       windowSize.width &&
       windowSize.width >= parseInt(fullConfig.theme.screens.md)
     ) {
-      handleDismiss();
+      closeMenu();
     }
   }, [windowSize]);
+
+  function toggleMenu() {
+    setIsOpen(!isOpen);
+  }
+
+  function closeMenu() {
+    setIsOpen(false);
+  }
 
   return (
     <nav className="md:hidden" aria-label="Mobile menu">
@@ -32,27 +40,19 @@ function HamburgerMenu() {
         <HamburgerButton
           className="relative isolate z-10"
           isOpen={isOpen}
-          onClick={handleToggle}
+          onClick={toggleMenu}
         />
         {isOpen && <Drawer />}
       </FocusLock>
     </nav>
   );
 
-  function handleToggle() {
-    setIsOpen(!isOpen);
-  }
-
-  function handleDismiss() {
-    setIsOpen(false);
-  }
-
   function Drawer() {
     return (
       <RemoveScroll>
         <div
           className="absolute inset-0 bg-black/50"
-          onClick={handleDismiss}
+          onClick={closeMenu}
           aria-hidden="true"
         />
         <ul className="absolute bottom-0 right-0 top-0 h-full w-2/3 animate-slideIn space-y-6 bg-white px-6 pt-36 text-xs text-black">
