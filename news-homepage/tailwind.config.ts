@@ -24,15 +24,6 @@ export default {
         lg: ["2.5rem", "2.5rem"],
         xl: ["3.5rem", "3.5rem"],
       },
-      animation: {
-        slideIn: "slideIn 0.5s ease-in-out",
-      },
-      keyframes: {
-        slideIn: {
-          "0%": { transform: "translateX(100%)" },
-          "100%": { transform: "translateX(0)" },
-        },
-      },
     },
   },
   plugins: [],
