@@ -53,7 +53,8 @@ function HamburgerMenu() {
         <div
           className="absolute inset-0 bg-black/50"
           onClick={handleDismiss}
-        ></div>
+          aria-hidden="true"
+        />
         <ul className="absolute bottom-0 right-0 top-0 h-full w-2/3 animate-slideIn space-y-6 bg-white px-6 pt-36 text-xs text-black">
           <li>
             <a
