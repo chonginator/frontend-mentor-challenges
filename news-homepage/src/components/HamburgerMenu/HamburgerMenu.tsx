@@ -9,6 +9,7 @@ import tailwindConfig from "../../../tailwind.config";
 
 import FocusLock from "react-focus-lock";
 import { RemoveScroll } from "react-remove-scroll";
+import { motion, AnimatePresence } from "framer-motion";
 
 const fullConfig = resolveConfig(tailwindConfig);
 
@@ -42,62 +43,75 @@ function HamburgerMenu() {
           isOpen={isOpen}
           onClick={toggleMenu}
         />
-        {isOpen && <Drawer />}
+        <AnimatePresence>{isOpen && <Drawer />}</AnimatePresence>
       </FocusLock>
     </nav>
   );
 
   function Drawer() {
     return (
-      <RemoveScroll>
-        <div
+      <>
+        <motion.div
           className="absolute inset-0 bg-black/50"
           onClick={closeMenu}
           aria-hidden="true"
-        />
-        <ul className="absolute bottom-0 right-0 top-0 h-full w-2/3 animate-slideIn space-y-6 bg-white px-6 pt-36 text-xs text-black">
-          <li>
-            <a
-              className="transition-colors hover:text-orange focus:text-orange"
-              href="#"
-            >
-              Home
-            </a>
-          </li>
-          <li>
-            <a
-              className="transition-colors hover:text-orange focus:text-orange"
-              href="#"
-            >
-              New
-            </a>
-          </li>
-          <li>
-            <a
-              className="transition-colors hover:text-orange focus:text-orange"
-              href="#"
-            >
-              Popular
-            </a>
-          </li>
-          <li>
-            <a
-              className="transition-colors hover:text-orange focus:text-orange"
-              href="#"
-            >
-              Trending
-            </a>
-          </li>
-          <li>
-            <a
-              className="transition-colors hover:text-orange focus:text-orange"
-              href="#"
-            >
-              Categories
-            </a>
-          </li>
-        </ul>
-      </RemoveScroll>
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+        ></motion.div>
+        <motion.div
+          className="absolute right-0 top-0 h-full w-2/3"
+          initial={{ translateX: "100%" }}
+          animate={{ translateX: "0" }}
+          exit={{ translateX: "100%" }}
+          transition={{ duration: 0.3, ease: "easeInOut" }}
+        >
+          <RemoveScroll className="h-full">
+            <ul className="h-full space-y-6 bg-white px-6 pt-36 text-xs text-black">
+              <li>
+                <a
+                  className="transition-colors hover:text-orange focus:text-orange"
+                  href="#"
+                >
+                  Home
+                </a>
+              </li>
+              <li>
+                <a
+                  className="transition-colors hover:text-orange focus:text-orange"
+                  href="#"
+                >
+                  New
+                </a>
+              </li>
+              <li>
+                <a
+                  className="transition-colors hover:text-orange focus:text-orange"
+                  href="#"
+                >
+                  Popular
+                </a>
+              </li>
+              <li>
+                <a
+                  className="transition-colors hover:text-orange focus:text-orange"
+                  href="#"
+                >
+                  Trending
+                </a>
+              </li>
+              <li>
+                <a
+                  className="transition-colors hover:text-orange focus:text-orange"
+                  href="#"
+                >
+                  Categories
+                </a>
+              </li>
+            </ul>
+          </RemoveScroll>
+        </motion.div>
+      </>
     );
   }
 }
