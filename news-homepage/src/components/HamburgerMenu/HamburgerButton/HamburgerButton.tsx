@@ -9,6 +9,7 @@ function HamburgerButton({
 }: HamburgerButtonProps) {
   // Pythagorean theorem is used where the width of the bar is the hypotenuse when crossed
   const crossSize = 0.5 * Math.sqrt(2) * width;
+  const visuallyHiddenText = isOpen ? "Close mobile menu" : "Open mobile menu";
 
   return (
     <button

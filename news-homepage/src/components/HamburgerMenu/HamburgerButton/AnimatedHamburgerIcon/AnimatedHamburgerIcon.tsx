@@ -17,6 +17,8 @@ function AnimatedHamburgerIcon({
       overflow="visible"
       stroke="currentColor"
       strokeWidth={3}
+      aria-hidden="true"
+      focusable="false"
       {...props}
     >
       <AnimatedLine
