@@ -1,4 +1,5 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
+import MaxWidthWrapper from "./components/MaxWidthWrapper";
 import Header from "./components/Header";
 import FeaturedStory from "./components/FeaturedStory";
 import RecentStories from "./components/RecentStories";
@@ -6,18 +7,16 @@ import TopStories from "./components/TopStories";
 
 function App() {
   return (
-    <div className="mx-auto grid max-w-[1110px] place-content-center px-4">
-      <div className="mt-7 md:mt-[89px]">
-        <Header />
-        <main>
-          <FeaturedStoryGrid>
-            <FeaturedStory />
-            <RecentStories />
-          </FeaturedStoryGrid>
-          <TopStories />
-        </main>
-      </div>
-    </div>
+    <MaxWidthWrapper className="mt-7 md:mt-[89px]">
+      <Header />
+      <main>
+        <FeaturedStoryGrid>
+          <FeaturedStory />
+          <RecentStories />
+        </FeaturedStoryGrid>
+        <TopStories />
+      </main>
+    </MaxWidthWrapper>
   );
 
   function FeaturedStoryGrid({ children }: { children: React.ReactNode }) {
