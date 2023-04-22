@@ -1,30 +1,29 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
+import { TOP_STORIES } from "../../data";
+
 function TopStories() {
   return (
-    <div>
-      <article>
-        <img src="/images/image-retro-pcs.jpg" alt="Retro PC" />
-        <div>
-          <span>01</span>
-          <h3>Reviving Retro PCs</h3>
-          <p>What happens when old PCs are given modern upgrades?</p>
-        </div>
-      </article>
-      <article>
-        <img src="/images/image-top-laptops.jpg" alt="Computer Keyboard" />
-        <div>
-          <span>02</span>
-          <h3>Top 10 Laptops of 2022</h3>
-          <p>Our best picks for various needs and budgets.</p>
-        </div>
-      </article>
-      <article>
-        <img src="/images/image-gaming-growth.jpg" alt="PS5 controller" />
-        <div>
-          <span>03</span>
-          <h3>The Growth of Gaming</h3>
-          <p>How the pandemic has sparked fresh opportunities.</p>
-        </div>
-      </article>
+    <div className="flex flex-col gap-8 md:flex-row">
+      {TOP_STORIES.map(({ id, headline, subhead, image }, index) => (
+        <article key={id} className="flex gap-6">
+          <img
+            src={image.src}
+            alt={image.alt}
+            className="max-w-[100px] object-cover"
+          />
+          <div className="flex flex-col gap-3">
+            <span className="text-md font-bold text-gray">
+              {(index + 1).toString().padStart(2, "0")}
+            </span>
+            <a href="#" className="group">
+              <h3 className="text-xs font-extrabold text-black transition-colors group-hover:text-orange">
+                {headline}
+              </h3>
+            </a>
+            <p className="text-darkGray">{subhead}</p>
+          </div>
+        </article>
+      ))}
     </div>
   );
 }
