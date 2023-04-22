@@ -6,7 +6,7 @@ function FeaturedStory() {
   return (
     <div className="col-span-2">
       <img
-        className="h-[300px] w-full object-cover object-top md:w-[730px]"
+        className="max-h-[300px] w-full object-cover object-top md:w-[730px]"
         src={image.src}
         alt={image.alt}
       />

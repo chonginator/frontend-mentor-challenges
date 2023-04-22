@@ -8,20 +8,20 @@ import TopStories from "./components/TopStories";
 function App() {
   return (
     <MaxWidthWrapper className="flow-root">
-      <div className="mt-7 md:mt-[89px]">
+      <div className="mb-20 mt-7 md:mb-[129px] md:mt-[89px]">
         <Header />
-        <main>
-          <FeaturedStoryGrid>
+        <main className="flex flex-col gap-16">
+          <MainStoryGrid>
             <FeaturedStory />
             <RecentStories />
-          </FeaturedStoryGrid>
+          </MainStoryGrid>
           <TopStories />
         </main>
       </div>
     </MaxWidthWrapper>
   );
 
-  function FeaturedStoryGrid({ children }: { children: React.ReactNode }) {
+  function MainStoryGrid({ children }: { children: React.ReactNode }) {
     return (
       <div className="mt-8 grid gap-16 md:mt-[55.1px] md:grid-cols-3 md:gap-[30px]">
         {children}
