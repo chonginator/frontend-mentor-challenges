@@ -7,15 +7,17 @@ import TopStories from "./components/TopStories";
 
 function App() {
   return (
-    <MaxWidthWrapper className="mt-7 md:mt-[89px]">
-      <Header />
-      <main>
-        <FeaturedStoryGrid>
-          <FeaturedStory />
-          <RecentStories />
-        </FeaturedStoryGrid>
-        <TopStories />
-      </main>
+    <MaxWidthWrapper className="flow-root">
+      <div className="mt-7 md:mt-[89px]">
+        <Header />
+        <main>
+          <FeaturedStoryGrid>
+            <FeaturedStory />
+            <RecentStories />
+          </FeaturedStoryGrid>
+          <TopStories />
+        </main>
+      </div>
     </MaxWidthWrapper>
   );
 
