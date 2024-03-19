@@ -8,13 +8,27 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-      },
+      colors: {
+        "gray": {
+          100: "hsl(0, 0%, 100%)",
+          200: "hsl(0, 0%, 96%)",
+          300: "hsl(0, 0%, 89%)",
+          400: "hsl(222, 9%, 78%)",
+          500: "hsl(213, 4%, 51%)",
+          600: "hsl(216, 8%, 38%)",
+          700: "hsl(216, 9%, 23%)",
+          800: "hsl(220, 7%, 18%)",
+          900: "hsl(216, 8%, 12%)",
+          1000: "hsl(225, 9%, 9%)",
+        },
+        "orange": {
+          400: "hsl(21, 86%, 67%)",
+          600: "hsl(13, 75%, 58%)",
+        }
+      }
     },
   },
   plugins: [],
+  darkMode: "selector"
 };
 export default config;
