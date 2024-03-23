@@ -1,4 +1,7 @@
 import type { Metadata } from "next";
+import clsx from "clsx";
+
+import { roboto, roboto_slab } from "./fonts";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -12,7 +15,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={clsx(roboto.variable, roboto_slab.variable)}>
       <body>{children}</body>
     </html>
   );

@@ -9,7 +9,7 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        "gray": {
+        gray: {
           100: "hsl(0, 0%, 100%)",
           200: "hsl(0, 0%, 96%)",
           300: "hsl(0, 0%, 89%)",
@@ -21,14 +21,18 @@ const config: Config = {
           900: "hsl(216, 8%, 12%)",
           1000: "hsl(225, 9%, 9%)",
         },
-        "orange": {
+        orange: {
           400: "hsl(21, 86%, 67%)",
           600: "hsl(13, 75%, 58%)",
-        }
-      }
+        },
+      },
+      fontFamily: {
+        sans: ["var(--font-roboto)"],
+        serif: ["var(--font-roboto-slab)"],
+      },
     },
   },
   plugins: [],
-  darkMode: "selector"
+  darkMode: "selector",
 };
 export default config;
