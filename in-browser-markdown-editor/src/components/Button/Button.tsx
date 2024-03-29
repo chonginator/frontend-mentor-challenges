@@ -1,17 +1,32 @@
-import React, { FC, SVGProps } from "react";
-
-interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  icon?: FC<SVGProps<SVGElement>>;
+import React from "react";
+import { cn } from "@/utils";
+export interface ButtonProps
+  extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  icon?: React.FC<React.SVGProps<SVGSVGElement>>;
 }
 
-function Button({ icon: Icon, children, ...delegated }: ButtonProps) {
+function Button({
+  icon: Icon,
+  className = "",
+  children,
+  ...delegated
+}: ButtonProps) {
+  const isIconOnly = Icon && !children;
+
   return (
     <button
-      className="flex flex-row gap-2 items-center font-sans text-[15px] font-normal text-gray-100 bg-orange-600 hover:bg-orange-400 rounded-[4px] py-[10px] px-4 transition-colors"
       {...delegated}
+      className={cn(
+        "flex flex-row items-center justify-center gap-2 rounded-[4px] bg-orange-600 px-4 py-[10px] font-sans text-[15px] font-normal text-gray-100 transition-colors hover:bg-orange-400",
+        className,
+        {
+          "bg-transparent text-gray-500 hover:bg-transparent hover:text-orange-600":
+            isIconOnly,
+        },
+      )}
     >
-      <span>{Icon && <Icon className="size-4 fill-current stroke-2" />}</span>
-      <span>{children}</span>
+      {Icon && <Icon className={"size-4 fill-current stroke-2"} />}
+      {children}
     </button>
   );
 }
