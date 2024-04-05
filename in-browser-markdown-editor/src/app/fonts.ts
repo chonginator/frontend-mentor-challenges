@@ -1,4 +1,4 @@
-import { Roboto, Roboto_Slab } from "next/font/google";
+import { Roboto, Roboto_Slab, Roboto_Mono } from "next/font/google";
 
 export const roboto = Roboto({
   subsets: ["latin"],
@@ -12,4 +12,11 @@ export const roboto_slab = Roboto_Slab({
   display: "fallback",
   weight: "variable",
   variable: "--font-roboto-slab",
+});
+
+export const roboto_mono = Roboto_Mono({
+  subsets: ["latin"],
+  display: "fallback",
+  weight: "variable",
+  variable: "--font-roboto-mono",
 });

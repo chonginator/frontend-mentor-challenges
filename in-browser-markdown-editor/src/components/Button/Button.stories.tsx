@@ -1,11 +1,15 @@
 import React from "react";
 import type { Meta, StoryObj } from "@storybook/react";
-import clsx from "clsx";
+import { cn } from "@/utils";
 
 import Button from ".";
 import Save from "/assets/icon-save.svg";
 import Delete from "/assets/icon-delete.svg";
 import Preview from "/assets/icon-show-preview.svg";
+import HidePreview from "/assets/icon-hide-preview.svg";
+
+import PreviewIcon from "@/components/icons/PreviewIcon";
+import HidePreviewIcon from "@/components/icons/HidePreviewIcon";
 
 const meta = {
   title: "Components/Button",
@@ -30,7 +34,7 @@ export const SaveButton: Story = {
 export const TrashButton: Story = {
   args: {
     icon: ({ className }) => (
-      <Delete className={clsx(className, "w-[18px] h-5")} />
+      <Delete className={cn(className, "h-5 w-[18px]")} />
     ),
     className:
       "bg-transparent hover:bg-transparent text-gray-500 hover:text-orange-600",
@@ -40,7 +44,13 @@ export const TrashButton: Story = {
 
 export const PreviewButton: Story = {
   args: {
-    icon: ({ className }) => <Preview className={clsx(className, "w-4 h-3")} />,
+    icon: PreviewIcon,
+  },
+};
+
+export const HidePreviewButton: Story = {
+  args: {
+    icon: HidePreviewIcon,
   },
 };
 

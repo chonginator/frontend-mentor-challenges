@@ -1,9 +1,9 @@
 import { cookies } from "next/headers";
 import type { Metadata } from "next";
-import clsx from "clsx";
+import { cn } from "@/utils";
 import DarkLightToggle from "@/components/DarkLightToggle";
 
-import { roboto, roboto_slab } from "./fonts";
+import { roboto, roboto_slab, roboto_mono } from "./fonts";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -17,13 +17,20 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   const savedTheme = cookies().get("colour-theme");
-  const theme = savedTheme?.value || "light";
+  let initialTheme: "light" | "dark" = "light";
+
+  if (savedTheme?.value === "dark") {
+    initialTheme = "dark";
+  }
 
   return (
-    <html lang="en" className={clsx(roboto.variable, roboto_slab.variable)}>
+    <html
+      lang="en"
+      className={cn(roboto.variable, roboto_slab.variable, roboto_mono)}
+    >
       <body>
         {children}
-        <DarkLightToggle initialTheme={theme} />
+        <DarkLightToggle initialTheme={initialTheme} />
       </body>
     </html>
   );

@@ -29,6 +29,7 @@ const config: Config = {
       fontFamily: {
         sans: ["var(--font-roboto)"],
         serif: ["var(--font-roboto-slab)"],
+        mono: ["var(--font-roboto-mono)"],
       },
     },
   },
