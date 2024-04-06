@@ -12,7 +12,7 @@ function PreviewPane({ className = "", markdown }: PreviewPaneProps) {
     <div className={cn("hidden grow flex-col md:flex", className)}>
       <EditorHeader>Preview</EditorHeader>
       <ReactMarkdown
-        className="flex grow flex-col gap-5 overflow-auto bg-gray-100 p-6 dark:bg-gray-1000 dark:text-gray-400"
+        className="scrollbar-thin scrollbar-track-gray-100 dark:scrollbar-track-gray-1000 scrollbar-thumb-gray-300 dark:scrollbar-thumb-gray-600 flex grow flex-col gap-5 overflow-auto bg-gray-100 p-6 dark:bg-gray-1000 dark:text-gray-400"
         components={{
           h1: ({ children, ...delegated }) => (
             <h1
@@ -64,7 +64,7 @@ function PreviewPane({ className = "", markdown }: PreviewPaneProps) {
           ),
           pre: ({ children, ...delegated }) => (
             <pre
-              className="shrink-0 overflow-auto rounded-[4px] bg-gray-200 p-6 font-mono text-sm/6 text-gray-700 dark:bg-gray-800 dark:text-gray-100"
+              className="scrollbar-thin scrollbar-track-gray-100 dark:scrollbar-track-gray-1000 scrollbar-thumb-gray-300 dark:scrollbar-thumb-gray-600 shrink-0 overflow-auto rounded-[4px] bg-gray-200 p-6 font-mono text-sm/6 text-gray-700 dark:bg-gray-800 dark:text-gray-100"
               {...delegated}
             >
               {children}
