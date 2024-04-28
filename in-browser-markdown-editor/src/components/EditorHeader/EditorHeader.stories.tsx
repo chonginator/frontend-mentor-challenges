@@ -22,6 +22,7 @@ export const Default: Story = {
     isMenuOpen: false,
     toggleMenuOpen: action("toggleMenuOpen"),
     onDeleteFile: action("onDeleteFile"),
+    onSaveFiles: action("onSaveFiles"),
   },
   render: (args) => {
     const [, updateArgs] = useArgs();
@@ -33,31 +34,5 @@ export const Default: Story = {
     return <EditorHeader {...args} onFileNameChange={onFileNameChange} />;
   },
 };
-
-// export const Defafult = () => {
-//   const Wrapper = () => {
-//     const [fileName, setFileName] = React.useState(defaultMarkdownFile.name);
-
-//     const label = new Date()
-//       .toLocaleDateString("en-GB", {
-//         year: "numeric",
-//         month: "long",
-//         day: "2-digit",
-//       })
-//       .replace(",", "");
-
-//     return (
-//       <EditorHeader
-//         activeFileName={fileName}
-//         setActiveFileName={setFileName}
-//         isMenuOpen={false}
-//         toggleMenuOpen={action("toggleMenuOpen")}
-//         onDeleteFile={action("onDeleteFile")}
-//       />
-//     );
-//   };
-
-//   return <Wrapper />;
-// };
 
 export default meta;

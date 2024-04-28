@@ -18,7 +18,9 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   args: {
     files: [defaultMarkdownFile],
-    onCreateNewFile: action("onCreateNewFile"),
+    handleCreateNewFile: action("handleCreateNewFile"),
+    lastValidFileName: "",
+    handleActiveFileNameChange: action("handleActiveFileNameChange"),
   },
 };
 
