@@ -1,73 +1,70 @@
 import React from "react";
-import FileInfo from "../FileInfo";
 import { useFloating, autoUpdate, offset } from "@floating-ui/react";
-import {
-  isFileNameInvalid,
-  isFileNameTooLong,
-  isFileNameEmpty,
-  isFileNameContainingInvalidCharacters,
-} from "@/utils";
+
+import FileInfoWrapper from "../FileInfo";
+import { cn } from "@/utils";
+import { ActiveFileName } from "@/types";
 
 type FileInfoInputProps = {
-  fileName: string;
+  fileName: ActiveFileName;
+  errorMessage: string;
+  onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  onBlur: () => void;
   label: string;
 };
 
 function FileInfoInput({
-  fileName: initialFileName,
+  fileName,
+  errorMessage,
+  onChange,
+  onBlur,
   label,
 }: FileInfoInputProps) {
-  const [fileName, setFileName] = React.useState(initialFileName);
-  const [lastValidFileName, setLastValidFileName] =
-    React.useState(initialFileName);
-  const [fileNameErrorMessage, setFileNameErrorMessage] = React.useState("");
-
   const { refs, floatingStyles } = useFloating({
-    open: isFileNameInvalid(fileName),
-    middleware: [offset(10)],
+    open: errorMessage !== "",
+    middleware: [offset(24)],
     whileElementsMounted: autoUpdate,
   });
 
-  function handleFileNameChange(event: React.ChangeEvent<HTMLInputElement>) {
-    const newFileName = event.target.value;
-    setFileName(newFileName);
-
-    if (isFileNameEmpty(newFileName)) {
-      setFileNameErrorMessage("File Name cannot be empty");
-    } else if (isFileNameContainingInvalidCharacters(newFileName)) {
-      setFileNameErrorMessage(
-        "File Name can only contain letters, numbers, underscores, and spaces",
-      );
-    } else if (isFileNameTooLong(newFileName)) {
-      setFileNameErrorMessage(
-        "File Name must be less than 100 characters long",
-      );
-    } else {
-      setLastValidFileName(newFileName);
-    }
-  }
-
-  function restoreLastValidFileName() {
-    setFileName(lastValidFileName);
-  }
-
   return (
     <>
-      <div ref={refs.setReference} className="max-w-[400px]">
-        <FileInfo
-          fileName={fileName}
-          label={label}
-          onFileNameChange={handleFileNameChange}
-          onRestoreLastValidFileName={restoreLastValidFileName}
-        />
+      <div ref={refs.setReference} className="max-w-[400px] grow">
+        <FileInfoWrapper>
+          <label
+            htmlFor="fileName"
+            className={cn(
+              "cursor-pointer font-sans text-[13px]/none text-gray-500",
+              {
+                "text-[15px]/none": fileName === null,
+                "hidden md:flex": fileName !== null,
+              },
+            )}
+          >
+            {label}
+          </label>
+          {fileName !== null && (
+            <input
+              id="fileName"
+              type="text"
+              className="w-full cursor-pointer appearance-none truncate border-b border-b-transparent bg-transparent font-sans text-[15px]/none text-gray-100 outline-none transition-colors group-hover:text-orange-600 focus:border-b focus:border-b-gray-100"
+              disabled={!onChange}
+              value={fileName || ""}
+              onChange={(event) => onChange && onChange(event)}
+              onBlur={onBlur}
+              autoComplete="off"
+              spellCheck="false"
+              autoCapitalize="none"
+            />
+          )}
+        </FileInfoWrapper>
       </div>
-      {isFileNameInvalid(fileName) && (
+      {errorMessage && (
         <div
           ref={refs.setFloating}
-          className="rounded-s bg-gray-900 p-3 font-serif text-[13px] text-gray-400"
+          className="z-10 rounded-s bg-gray-900 p-3 font-serif text-[13px] text-gray-400"
           style={floatingStyles}
         >
-          {fileNameErrorMessage}
+          {errorMessage}
         </div>
       )}
     </>

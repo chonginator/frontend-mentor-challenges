@@ -1,13 +1,9 @@
-import React from "react";
 import type { Meta, StoryObj } from "@storybook/react";
-import { cn } from "@/utils";
 
 import Button from ".";
 import Save from "/assets/icon-save.svg";
-import Delete from "/assets/icon-delete.svg";
-import Preview from "/assets/icon-show-preview.svg";
-import HidePreview from "/assets/icon-hide-preview.svg";
 
+import DeleteIcon from "@/components/icons/DeleteIcon";
 import PreviewIcon from "@/components/icons/PreviewIcon";
 import HidePreviewIcon from "@/components/icons/HidePreviewIcon";
 
@@ -33,9 +29,7 @@ export const SaveButton: Story = {
 
 export const TrashButton: Story = {
   args: {
-    icon: ({ className }) => (
-      <Delete className={cn(className, "h-5 w-[18px]")} />
-    ),
+    icon: DeleteIcon,
     className:
       "bg-transparent hover:bg-transparent text-gray-500 hover:text-orange-600",
     "aria-label": "Delete",

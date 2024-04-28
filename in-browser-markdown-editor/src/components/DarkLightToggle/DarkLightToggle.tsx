@@ -22,7 +22,11 @@ function DarkLightToggle({ initialTheme = "light" }: DarkLightToggleProps) {
   }
 
   return (
-    <div className="flex flex-row items-center gap-[10px]">
+    <motion.div
+      layout={true}
+      layoutRoot={true}
+      className="flex flex-row items-center gap-[10px]"
+    >
       <Moon
         className={cn("h-4 w-[17px] fill-gray-600 transition-colors", {
           "fill-gray-100": theme === "dark",
@@ -49,7 +53,7 @@ function DarkLightToggle({ initialTheme = "light" }: DarkLightToggleProps) {
           "fill-gray-600": theme === "dark",
         })}
       />
-    </div>
+    </motion.div>
   );
 }
 

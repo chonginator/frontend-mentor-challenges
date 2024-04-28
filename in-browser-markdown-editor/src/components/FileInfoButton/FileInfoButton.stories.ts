@@ -1,4 +1,5 @@
 import { Meta, StoryObj } from "@storybook/react";
+import { action } from "@storybook/addon-actions";
 import FileInfoButton from ".";
 
 const meta = {
@@ -18,6 +19,8 @@ export const Default: Story = {
         day: "2-digit",
       })
       .replace(",", ""),
+    isActive: false,
+    handleActiveFileNameChange: action("handleActiveFileNameChange"),
   },
 };
 

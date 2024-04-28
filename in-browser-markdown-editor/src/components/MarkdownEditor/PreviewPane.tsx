@@ -1,7 +1,7 @@
 import React from "react";
 import ReactMarkdown from "react-markdown";
 
-import EditorHeader from "./EditorHeader";
+import PaneHeader from "./PaneHeader";
 
 import { cn } from "@/utils";
 
@@ -10,9 +10,9 @@ type PreviewPaneProps = { className?: string; markdown: string };
 function PreviewPane({ className = "", markdown }: PreviewPaneProps) {
   return (
     <div className={cn("hidden grow flex-col md:flex", className)}>
-      <EditorHeader>Preview</EditorHeader>
+      <PaneHeader>Preview</PaneHeader>
       <ReactMarkdown
-        className="scrollbar-thin scrollbar-track-gray-100 dark:scrollbar-track-gray-1000 scrollbar-thumb-gray-300 dark:scrollbar-thumb-gray-600 flex grow flex-col gap-5 overflow-auto bg-gray-100 p-6 dark:bg-gray-1000 dark:text-gray-400"
+        className="flex grow flex-col gap-5 overflow-auto bg-gray-100 p-6 scrollbar-thin scrollbar-track-gray-100 scrollbar-thumb-gray-300 dark:bg-gray-1000 dark:text-gray-400 dark:scrollbar-track-gray-1000 dark:scrollbar-thumb-gray-600"
         components={{
           h1: ({ children, ...delegated }) => (
             <h1
@@ -64,7 +64,7 @@ function PreviewPane({ className = "", markdown }: PreviewPaneProps) {
           ),
           pre: ({ children, ...delegated }) => (
             <pre
-              className="scrollbar-thin scrollbar-track-gray-100 dark:scrollbar-track-gray-1000 scrollbar-thumb-gray-300 dark:scrollbar-thumb-gray-600 shrink-0 overflow-auto rounded-[4px] bg-gray-200 p-6 font-mono text-sm/6 text-gray-700 dark:bg-gray-800 dark:text-gray-100"
+              className="shrink-0 overflow-auto rounded-[4px] bg-gray-200 p-6 font-mono text-sm/6 text-gray-700 scrollbar-thin scrollbar-track-gray-100 scrollbar-thumb-gray-300 dark:bg-gray-800 dark:text-gray-100 dark:scrollbar-track-gray-1000 dark:scrollbar-thumb-gray-600"
               {...delegated}
             >
               {children}

@@ -7,6 +7,13 @@ const meta = {
   parameters: {
     layout: "fullscreen",
   },
+  decorators: [
+    (Story: React.ComponentType) => (
+      <div className="flex h-dvh">
+        <Story />
+      </div>
+    ),
+  ],
 } satisfies Meta<typeof MarkdownEditor>;
 
 type Story = StoryObj<typeof meta>;
