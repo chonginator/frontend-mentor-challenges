@@ -22,13 +22,13 @@ function AnimatedHamburgerIcon({
       {...props}
     >
       <AnimatedLine
-        className="origin-[50%_0]"
         x1="0"
         x2={width}
         y1="0"
         y2="0"
         animate={variant}
         variants={lineVariants.top}
+        style={{ originX: "50%", originY: 0 }}
       ></AnimatedLine>
       <AnimatedLine
         x1="0"
@@ -39,13 +39,13 @@ function AnimatedHamburgerIcon({
         variants={lineVariants.middle}
       ></AnimatedLine>
       <AnimatedLine
-        className="origin-[50%_100%]"
         x1="0"
         x2={width}
         y1={height}
         y2={height}
         animate={variant}
         variants={lineVariants.bottom}
+        style={{ originX: "50%", originY: "100%" }}
       ></AnimatedLine>
     </motion.svg>
   );
